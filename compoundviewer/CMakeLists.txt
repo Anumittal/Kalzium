@@ -1,10 +1,8 @@
 include(${Avogadro_USE_FILE})
 
-include_directories(
-  ${CMAKE_CURRENT_BINARY_DIR}/..
-  ${EIGEN3_INCLUDE_DIR}
-  ${OPENBABEL2_INCLUDE_DIR}
-  )
+#include_directories( ${CMAKE_CURRENT_BINARY_DIR}/..
+ # ${EIGEN3_INCLUDE_DIR}
+  #${OPENBABEL2_INCLUDE_DIR})
 
 set( compoundviewer_SRCS
   openbabel2wrapper.cpp
@@ -13,12 +11,12 @@ set( compoundviewer_SRCS
 
 #add_subdirectory(widgets)
 
-kde4_add_library(compoundviewer SHARED ${compoundviewer_SRCS})
+add_library(compoundviewer SHARED ${compoundviewer_SRCS})
 
 target_link_libraries(compoundviewer
    ${OPENBABEL2_LIBRARIES}
-   ${QT_QTOPENGL_LIBRARY}
-   ${KDE4_KDEUI_LIBS}
+   Qt5::OpenGL
+   KF5::WidgetsAddons
    avogadro
 )
 
