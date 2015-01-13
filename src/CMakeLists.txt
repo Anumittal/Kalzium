@@ -133,7 +133,7 @@ kconfig_add_kcfg_files(kalzium_SRCS prefs.kcfgc )
 
 add_executable(kalzium ${kalzium_SRCS})
 
-target_link_libraries(kalzium KDE5::KHTML KDE5::NewStuff KDE4_KUNITCONVERSION_LIBS Qt5::Script  Qt5::Declarative science)
+target_link_libraries(kalzium KDE5::KHTML KDE5::NewStuff KDE4_KUNITCONVERSION_LIBS Qt5::Script  Qt5::Declarative science ${OPENBABEL2_LIBRARIES})
 #QT_QTSCRIPT_LIBRARY
 if (OPENBABEL2_FOUND)
    target_link_libraries(kalzium ${OPENBABEL2_LIBRARIES})

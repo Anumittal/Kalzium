@@ -1,0 +1,1430 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="kalzium" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;CMake Files\plasmoid\;CMake Files\plasmoid\applet\;CMake Files\plasmoid\applet\concentrationPlasmoid\;CMake Files\plasmoid\applet\gasPlasmoid\;CMake Files\plasmoid\applet\didyouknow\;CMake Files\plasmoid\applet\nuclearPlasmoid\;CMake Files\plasmoid\applet\psePlasmoid\;CMake Files\plasmoid\engine\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\usr\;CMake Files\..\..\..\usr\share\;CMake Files\..\..\..\usr\share\ECM\;CMake Files\..\..\..\usr\share\ECM\cmake\;CMake Files\..\..\..\usr\share\ECM\modules\;CMake Files\..\..\..\usr\share\ECM\find-modules\;CMake Files\..\..\..\usr\share\ECM\kde-modules\;CMake Files\..\..\..\usr\lib\;CMake Files\..\..\..\usr\lib\i386-linux-gnu\;CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\;CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5\;CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Widgets\;CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Gui\;CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Core\;CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5CoreAddons\;CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Solid\;CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Config\;CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Xml\;CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5DocTools\;CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Archive\;CMake Files\..\..\..\usr\lib\avogadro\;CMake Files\..\..\..\usr\lib\avogadro\1_1\;CMake Files\..\..\..\usr\lib\avogadro\1_1\cmake\;CMake Files\cmake\;CMake Files\cmake\modules\;CMake Files\compoundviewer\;CMake Files\doc\;CMake Files\src\;CMake Files\data\;CMake Files\data\hazardsymbols\;CMake Files\data\htmlview\;CMake Files\data\icons\;CMake Files\data\iconsets\;CMake Files\data\iconsets\school\;CMake Files\data\toolpics\;CMake Files\data\latticeicons\;CMake Files\data\maps\;CMake Files\data\molecules\;CMake Files\libscience\;CMake Files\libscience\data\;CMake Files\libscience\tests\;CMake Files\qml\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/anu/kalzium/makefile2" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="install">
+         <Option working_dir="/home/anu/kalzium/makefile2" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/Makefile&quot;  VERBOSE=1 install" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="install/local">
+         <Option working_dir="/home/anu/kalzium/makefile2" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/Makefile&quot;  VERBOSE=1 install/local" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="install/strip">
+         <Option working_dir="/home/anu/kalzium/makefile2" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/Makefile&quot;  VERBOSE=1 install/strip" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="list_install_components">
+         <Option working_dir="/home/anu/kalzium/makefile2" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/Makefile&quot;  VERBOSE=1 list_install_components" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/home/anu/kalzium/makefile2" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="compoundviewer">
+         <Option output="/home/anu/kalzium/makefile2/compoundviewer/libcompoundviewer.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/anu/kalzium/makefile2/compoundviewer" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GNU_SOURCE" />
+            <Add option="-D_LARGEFILE64_SOURCE" />
+            <Add option="-D_FILE_OFFSET_BITS=64" />
+            <Add option="-DQT_USE_FAST_CONCATENATION" />
+            <Add option="-DQT_USE_FAST_OPERATOR_PLUS" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add option="-DQT_OPENGL_LIB" />
+            <Add option="-DQT_GUI_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_PLUGIN" />
+            <Add option="-DQT_SHARED" />
+            <Add option="-DENABLE_GLSL" />
+            <Add directory="/usr/include/eigen2" />
+            <Add directory="/usr/include/qt4" />
+            <Add directory="/usr/include/qt4/QtCore" />
+            <Add directory="/usr/include/qt4/QtGui" />
+            <Add directory="/usr/include/qt4/QtOpenGL" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/compoundviewer/Makefile&quot;  VERBOSE=1 compoundviewer" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/compoundviewer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/compoundviewer/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/compoundviewer/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="compoundviewer/fast">
+         <Option output="/home/anu/kalzium/makefile2/compoundviewer/libcompoundviewer.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/anu/kalzium/makefile2/compoundviewer" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GNU_SOURCE" />
+            <Add option="-D_LARGEFILE64_SOURCE" />
+            <Add option="-D_FILE_OFFSET_BITS=64" />
+            <Add option="-DQT_USE_FAST_CONCATENATION" />
+            <Add option="-DQT_USE_FAST_OPERATOR_PLUS" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add option="-DQT_OPENGL_LIB" />
+            <Add option="-DQT_GUI_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_PLUGIN" />
+            <Add option="-DQT_SHARED" />
+            <Add option="-DENABLE_GLSL" />
+            <Add directory="/usr/include/eigen2" />
+            <Add directory="/usr/include/qt4" />
+            <Add directory="/usr/include/qt4/QtCore" />
+            <Add directory="/usr/include/qt4/QtGui" />
+            <Add directory="/usr/include/qt4/QtOpenGL" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/compoundviewer/Makefile&quot;  VERBOSE=1 compoundviewer/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/compoundviewer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/compoundviewer/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/compoundviewer/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="doc-index-cache-bz2">
+         <Option working_dir="/home/anu/kalzium/makefile2/doc" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/doc/Makefile&quot;  VERBOSE=1 doc-index-cache-bz2" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/doc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/doc/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/doc/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="doc-kalzium-1">
+         <Option working_dir="/home/anu/kalzium/makefile2/doc" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/doc/Makefile&quot;  VERBOSE=1 doc-kalzium-1" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/doc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/doc/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/doc/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="kalzium">
+         <Option output="/home/anu/kalzium/makefile2/src/kalzium" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/anu/kalzium/makefile2/src" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GNU_SOURCE" />
+            <Add option="-D_LARGEFILE64_SOURCE" />
+            <Add option="-D_FILE_OFFSET_BITS=64" />
+            <Add option="-DQT_USE_FAST_CONCATENATION" />
+            <Add option="-DQT_USE_FAST_OPERATOR_PLUS" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add option="-DQT_OPENGL_LIB" />
+            <Add option="-DQT_GUI_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_PLUGIN" />
+            <Add option="-DQT_SHARED" />
+            <Add option="-DENABLE_GLSL" />
+            <Add option="-DQT_XML_LIB" />
+            <Add directory="/home/anu/kalzium/libscience" />
+            <Add directory="/home/anu/kalzium/makefile2/src/.." />
+            <Add directory="/home/anu/kalzium/src/../compoundviewer" />
+            <Add directory="/home/anu/kalzium/src/calculator" />
+            <Add directory="/home/anu/kalzium/src/isotopetable" />
+            <Add directory="/home/anu/kalzium/src/psetable" />
+            <Add directory="/home/anu/kalzium/src/tools" />
+            <Add directory="/usr/include/eigen2" />
+            <Add directory="/usr/include/eigen3" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtCore" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtXml" />
+            <Add directory="/usr/include/openbabel-2.0" />
+            <Add directory="/usr/include/qt4" />
+            <Add directory="/usr/include/qt4/QtCore" />
+            <Add directory="/usr/include/qt4/QtGui" />
+            <Add directory="/usr/include/qt4/QtOpenGL" />
+            <Add directory="/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/src/Makefile&quot;  VERBOSE=1 kalzium" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/src/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/src/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="kalzium/fast">
+         <Option output="/home/anu/kalzium/makefile2/src/kalzium" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/anu/kalzium/makefile2/src" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GNU_SOURCE" />
+            <Add option="-D_LARGEFILE64_SOURCE" />
+            <Add option="-D_FILE_OFFSET_BITS=64" />
+            <Add option="-DQT_USE_FAST_CONCATENATION" />
+            <Add option="-DQT_USE_FAST_OPERATOR_PLUS" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add option="-DQT_OPENGL_LIB" />
+            <Add option="-DQT_GUI_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_PLUGIN" />
+            <Add option="-DQT_SHARED" />
+            <Add option="-DENABLE_GLSL" />
+            <Add option="-DQT_XML_LIB" />
+            <Add directory="/home/anu/kalzium/libscience" />
+            <Add directory="/home/anu/kalzium/makefile2/src/.." />
+            <Add directory="/home/anu/kalzium/src/../compoundviewer" />
+            <Add directory="/home/anu/kalzium/src/calculator" />
+            <Add directory="/home/anu/kalzium/src/isotopetable" />
+            <Add directory="/home/anu/kalzium/src/psetable" />
+            <Add directory="/home/anu/kalzium/src/tools" />
+            <Add directory="/usr/include/eigen2" />
+            <Add directory="/usr/include/eigen3" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtCore" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtXml" />
+            <Add directory="/usr/include/openbabel-2.0" />
+            <Add directory="/usr/include/qt4" />
+            <Add directory="/usr/include/qt4/QtCore" />
+            <Add directory="/usr/include/qt4/QtGui" />
+            <Add directory="/usr/include/qt4/QtOpenGL" />
+            <Add directory="/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/src/Makefile&quot;  VERBOSE=1 kalzium/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/src/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/src/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="plasma_applet_didyouknow">
+         <Option output="/home/anu/kalzium/makefile2/plasmoid/applet/didyouknow/libplasma_applet_didyouknow.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/anu/kalzium/makefile2/plasmoid/applet/didyouknow" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GNU_SOURCE" />
+            <Add option="-D_LARGEFILE64_SOURCE" />
+            <Add option="-D_FILE_OFFSET_BITS=64" />
+            <Add option="-DQT_USE_FAST_CONCATENATION" />
+            <Add option="-DQT_USE_FAST_OPERATOR_PLUS" />
+            <Add option="-DQT_XML_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtCore" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtXml" />
+            <Add directory="/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/didyouknow/Makefile&quot;  VERBOSE=1 plasma_applet_didyouknow" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/didyouknow/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/didyouknow/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/didyouknow/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="plasma_applet_didyouknow/fast">
+         <Option output="/home/anu/kalzium/makefile2/plasmoid/applet/didyouknow/libplasma_applet_didyouknow.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/anu/kalzium/makefile2/plasmoid/applet/didyouknow" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GNU_SOURCE" />
+            <Add option="-D_LARGEFILE64_SOURCE" />
+            <Add option="-D_FILE_OFFSET_BITS=64" />
+            <Add option="-DQT_USE_FAST_CONCATENATION" />
+            <Add option="-DQT_USE_FAST_OPERATOR_PLUS" />
+            <Add option="-DQT_XML_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtCore" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtXml" />
+            <Add directory="/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/didyouknow/Makefile&quot;  VERBOSE=1 plasma_applet_didyouknow/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/didyouknow/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/didyouknow/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/didyouknow/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="nuclearCalculator">
+         <Option output="/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid/libnuclearCalculator.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GNU_SOURCE" />
+            <Add option="-D_LARGEFILE64_SOURCE" />
+            <Add option="-D_FILE_OFFSET_BITS=64" />
+            <Add option="-DQT_USE_FAST_CONCATENATION" />
+            <Add option="-DQT_USE_FAST_OPERATOR_PLUS" />
+            <Add option="-DQT_XML_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtCore" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtXml" />
+            <Add directory="/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid/Makefile&quot;  VERBOSE=1 nuclearCalculator" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="nuclearCalculator/fast">
+         <Option output="/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid/libnuclearCalculator.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GNU_SOURCE" />
+            <Add option="-D_LARGEFILE64_SOURCE" />
+            <Add option="-D_FILE_OFFSET_BITS=64" />
+            <Add option="-DQT_USE_FAST_CONCATENATION" />
+            <Add option="-DQT_USE_FAST_OPERATOR_PLUS" />
+            <Add option="-DQT_XML_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtCore" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtXml" />
+            <Add directory="/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid/Makefile&quot;  VERBOSE=1 nuclearCalculator/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="concentrationCalculator">
+         <Option output="/home/anu/kalzium/makefile2/plasmoid/applet/concentrationPlasmoid/libconcentrationCalculator.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/anu/kalzium/makefile2/plasmoid/applet/concentrationPlasmoid" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GNU_SOURCE" />
+            <Add option="-D_LARGEFILE64_SOURCE" />
+            <Add option="-D_FILE_OFFSET_BITS=64" />
+            <Add option="-DQT_USE_FAST_CONCATENATION" />
+            <Add option="-DQT_USE_FAST_OPERATOR_PLUS" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/concentrationPlasmoid/Makefile&quot;  VERBOSE=1 concentrationCalculator" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/concentrationPlasmoid/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/concentrationPlasmoid/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/concentrationPlasmoid/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="concentrationCalculator/fast">
+         <Option output="/home/anu/kalzium/makefile2/plasmoid/applet/concentrationPlasmoid/libconcentrationCalculator.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/anu/kalzium/makefile2/plasmoid/applet/concentrationPlasmoid" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GNU_SOURCE" />
+            <Add option="-D_LARGEFILE64_SOURCE" />
+            <Add option="-D_FILE_OFFSET_BITS=64" />
+            <Add option="-DQT_USE_FAST_CONCATENATION" />
+            <Add option="-DQT_USE_FAST_OPERATOR_PLUS" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/concentrationPlasmoid/Makefile&quot;  VERBOSE=1 concentrationCalculator/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/concentrationPlasmoid/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/concentrationPlasmoid/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/concentrationPlasmoid/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="gasCalculator">
+         <Option output="/home/anu/kalzium/makefile2/plasmoid/applet/gasPlasmoid/libgasCalculator.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/anu/kalzium/makefile2/plasmoid/applet/gasPlasmoid" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GNU_SOURCE" />
+            <Add option="-D_LARGEFILE64_SOURCE" />
+            <Add option="-D_FILE_OFFSET_BITS=64" />
+            <Add option="-DQT_USE_FAST_CONCATENATION" />
+            <Add option="-DQT_USE_FAST_OPERATOR_PLUS" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/gasPlasmoid/Makefile&quot;  VERBOSE=1 gasCalculator" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/gasPlasmoid/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/gasPlasmoid/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/gasPlasmoid/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="gasCalculator/fast">
+         <Option output="/home/anu/kalzium/makefile2/plasmoid/applet/gasPlasmoid/libgasCalculator.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/anu/kalzium/makefile2/plasmoid/applet/gasPlasmoid" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GNU_SOURCE" />
+            <Add option="-D_LARGEFILE64_SOURCE" />
+            <Add option="-D_FILE_OFFSET_BITS=64" />
+            <Add option="-DQT_USE_FAST_CONCATENATION" />
+            <Add option="-DQT_USE_FAST_OPERATOR_PLUS" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/gasPlasmoid/Makefile&quot;  VERBOSE=1 gasCalculator/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/gasPlasmoid/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/gasPlasmoid/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/gasPlasmoid/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="plasma_applet_molmassCalculator">
+         <Option output="/home/anu/kalzium/makefile2/plasmoid/applet/psePlasmoid/libplasma_applet_molmassCalculator.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/anu/kalzium/makefile2/plasmoid/applet/psePlasmoid" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GNU_SOURCE" />
+            <Add option="-D_LARGEFILE64_SOURCE" />
+            <Add option="-D_FILE_OFFSET_BITS=64" />
+            <Add option="-DQT_USE_FAST_CONCATENATION" />
+            <Add option="-DQT_USE_FAST_OPERATOR_PLUS" />
+            <Add option="-DQT_XML_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add directory="/home/anu/kalzium" />
+            <Add directory="/home/anu/kalzium/libkdeedu/libscience" />
+            <Add directory="/home/anu/kalzium/makefile2" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtCore" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtXml" />
+            <Add directory="/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/psePlasmoid/Makefile&quot;  VERBOSE=1 plasma_applet_molmassCalculator" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/psePlasmoid/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/psePlasmoid/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/psePlasmoid/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="plasma_applet_molmassCalculator/fast">
+         <Option output="/home/anu/kalzium/makefile2/plasmoid/applet/psePlasmoid/libplasma_applet_molmassCalculator.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/anu/kalzium/makefile2/plasmoid/applet/psePlasmoid" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GNU_SOURCE" />
+            <Add option="-D_LARGEFILE64_SOURCE" />
+            <Add option="-D_FILE_OFFSET_BITS=64" />
+            <Add option="-DQT_USE_FAST_CONCATENATION" />
+            <Add option="-DQT_USE_FAST_OPERATOR_PLUS" />
+            <Add option="-DQT_XML_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add directory="/home/anu/kalzium" />
+            <Add directory="/home/anu/kalzium/libkdeedu/libscience" />
+            <Add directory="/home/anu/kalzium/makefile2" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtCore" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtXml" />
+            <Add directory="/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/psePlasmoid/Makefile&quot;  VERBOSE=1 plasma_applet_molmassCalculator/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/psePlasmoid/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/psePlasmoid/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/psePlasmoid/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="plasma_engine_kalzium">
+         <Option output="/home/anu/kalzium/makefile2/plasmoid/engine/libplasma_engine_kalzium.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/anu/kalzium/makefile2/plasmoid/engine" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GNU_SOURCE" />
+            <Add option="-D_LARGEFILE64_SOURCE" />
+            <Add option="-D_FILE_OFFSET_BITS=64" />
+            <Add option="-DQT_USE_FAST_CONCATENATION" />
+            <Add option="-DQT_USE_FAST_OPERATOR_PLUS" />
+            <Add option="-DQT_XML_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add directory="/home/anu/kalzium/libkdeedu/libscience" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtCore" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtXml" />
+            <Add directory="/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/engine/Makefile&quot;  VERBOSE=1 plasma_engine_kalzium" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/engine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/engine/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/engine/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="plasma_engine_kalzium/fast">
+         <Option output="/home/anu/kalzium/makefile2/plasmoid/engine/libplasma_engine_kalzium.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/anu/kalzium/makefile2/plasmoid/engine" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GNU_SOURCE" />
+            <Add option="-D_LARGEFILE64_SOURCE" />
+            <Add option="-D_FILE_OFFSET_BITS=64" />
+            <Add option="-DQT_USE_FAST_CONCATENATION" />
+            <Add option="-DQT_USE_FAST_OPERATOR_PLUS" />
+            <Add option="-DQT_XML_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add directory="/home/anu/kalzium/libkdeedu/libscience" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtCore" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtXml" />
+            <Add directory="/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/engine/Makefile&quot;  VERBOSE=1 plasma_engine_kalzium/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/engine/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/engine/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/engine/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="science">
+         <Option output="/home/anu/kalzium/makefile2/libscience/libscience.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/anu/kalzium/makefile2/libscience" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GNU_SOURCE" />
+            <Add option="-D_LARGEFILE64_SOURCE" />
+            <Add option="-D_FILE_OFFSET_BITS=64" />
+            <Add option="-DQT_USE_FAST_CONCATENATION" />
+            <Add option="-DQT_USE_FAST_OPERATOR_PLUS" />
+            <Add option="-DQT_XML_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtCore" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtXml" />
+            <Add directory="/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/Makefile&quot;  VERBOSE=1 science" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="science/fast">
+         <Option output="/home/anu/kalzium/makefile2/libscience/libscience.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/anu/kalzium/makefile2/libscience" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GNU_SOURCE" />
+            <Add option="-D_LARGEFILE64_SOURCE" />
+            <Add option="-D_FILE_OFFSET_BITS=64" />
+            <Add option="-DQT_USE_FAST_CONCATENATION" />
+            <Add option="-DQT_USE_FAST_OPERATOR_PLUS" />
+            <Add option="-DQT_XML_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtCore" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtXml" />
+            <Add directory="/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/Makefile&quot;  VERBOSE=1 science/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="elementparsertest">
+         <Option output="/home/anu/kalzium/makefile2/libscience/tests/elementparsertest" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/anu/kalzium/makefile2/libscience/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GNU_SOURCE" />
+            <Add option="-D_LARGEFILE64_SOURCE" />
+            <Add option="-D_FILE_OFFSET_BITS=64" />
+            <Add option="-DQT_USE_FAST_CONCATENATION" />
+            <Add option="-DQT_USE_FAST_OPERATOR_PLUS" />
+            <Add option="-DQT_XML_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add directory="/home/anu/kalzium/libscience/tests/.." />
+            <Add directory="/usr/include/i386-linux-gnu/qt5" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtCore" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtXml" />
+            <Add directory="/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/tests/Makefile&quot;  VERBOSE=1 elementparsertest" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="elementparsertest/fast">
+         <Option output="/home/anu/kalzium/makefile2/libscience/tests/elementparsertest" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/anu/kalzium/makefile2/libscience/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GNU_SOURCE" />
+            <Add option="-D_LARGEFILE64_SOURCE" />
+            <Add option="-D_FILE_OFFSET_BITS=64" />
+            <Add option="-DQT_USE_FAST_CONCATENATION" />
+            <Add option="-DQT_USE_FAST_OPERATOR_PLUS" />
+            <Add option="-DQT_XML_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add directory="/home/anu/kalzium/libscience/tests/.." />
+            <Add directory="/usr/include/i386-linux-gnu/qt5" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtCore" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtXml" />
+            <Add directory="/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/tests/Makefile&quot;  VERBOSE=1 elementparsertest/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="isotopeparsertest">
+         <Option output="/home/anu/kalzium/makefile2/libscience/tests/isotopeparsertest" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/anu/kalzium/makefile2/libscience/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GNU_SOURCE" />
+            <Add option="-D_LARGEFILE64_SOURCE" />
+            <Add option="-D_FILE_OFFSET_BITS=64" />
+            <Add option="-DQT_USE_FAST_CONCATENATION" />
+            <Add option="-DQT_USE_FAST_OPERATOR_PLUS" />
+            <Add option="-DQT_XML_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add directory="/home/anu/kalzium/libscience/tests/.." />
+            <Add directory="/usr/include/i386-linux-gnu/qt5" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtCore" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtXml" />
+            <Add directory="/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/tests/Makefile&quot;  VERBOSE=1 isotopeparsertest" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="isotopeparsertest/fast">
+         <Option output="/home/anu/kalzium/makefile2/libscience/tests/isotopeparsertest" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/anu/kalzium/makefile2/libscience/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GNU_SOURCE" />
+            <Add option="-D_LARGEFILE64_SOURCE" />
+            <Add option="-D_FILE_OFFSET_BITS=64" />
+            <Add option="-DQT_USE_FAST_CONCATENATION" />
+            <Add option="-DQT_USE_FAST_OPERATOR_PLUS" />
+            <Add option="-DQT_XML_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add directory="/home/anu/kalzium/libscience/tests/.." />
+            <Add directory="/usr/include/i386-linux-gnu/qt5" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtCore" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtXml" />
+            <Add directory="/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/tests/Makefile&quot;  VERBOSE=1 isotopeparsertest/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="spectrumtest">
+         <Option output="/home/anu/kalzium/makefile2/libscience/tests/spectrumtest" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/anu/kalzium/makefile2/libscience/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GNU_SOURCE" />
+            <Add option="-D_LARGEFILE64_SOURCE" />
+            <Add option="-D_FILE_OFFSET_BITS=64" />
+            <Add option="-DQT_USE_FAST_CONCATENATION" />
+            <Add option="-DQT_USE_FAST_OPERATOR_PLUS" />
+            <Add option="-DQT_XML_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add directory="/home/anu/kalzium/libscience/tests/.." />
+            <Add directory="/usr/include/i386-linux-gnu/qt5" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtCore" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtXml" />
+            <Add directory="/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/tests/Makefile&quot;  VERBOSE=1 spectrumtest" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="spectrumtest/fast">
+         <Option output="/home/anu/kalzium/makefile2/libscience/tests/spectrumtest" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/anu/kalzium/makefile2/libscience/tests" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GNU_SOURCE" />
+            <Add option="-D_LARGEFILE64_SOURCE" />
+            <Add option="-D_FILE_OFFSET_BITS=64" />
+            <Add option="-DQT_USE_FAST_CONCATENATION" />
+            <Add option="-DQT_USE_FAST_OPERATOR_PLUS" />
+            <Add option="-DQT_XML_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add directory="/home/anu/kalzium/libscience/tests/.." />
+            <Add directory="/usr/include/i386-linux-gnu/qt5" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtCore" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtXml" />
+            <Add directory="/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/tests/Makefile&quot;  VERBOSE=1 spectrumtest/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/tests/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/libscience/tests/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/anu/kalzium/compoundviewer/kalziumglwidget.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/compoundviewer/openbabel2wrapper.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/chemicaldataobject.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/element.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/elementparser.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/isotope.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/isotopeparser.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/moleculeparser.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/parser.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/psetables.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/spectrum.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/spectrumparser.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/tests/isotopereadingtest.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/tests/spectrumreadingtests.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/tests/xmlreadingtest.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/concentrationPlasmoid/concentrationCalculator.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/didyouknow/didyouknow.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/gasPlasmoid/gasCalculator.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/nuclearPlasmoid/kalziumdataobject.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/nuclearPlasmoid/nuclearCalculator.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/psePlasmoid/Molmasscalculator.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/psePlasmoid/Periodictable.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/engine/kalzium_engine.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/calculator/calculator.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/calculator/concCalculator.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/calculator/gasCalculator.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/calculator/nuclearCalculator.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/calculator/titrationCalculator.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/detailedgraphicaloverview.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/detailinfodlg.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/elementdataviewer.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/eqchemview.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/exportdialog.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/gradientwidget_impl.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/isotopetable/informationitem.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/isotopetable/isotopeguideview.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/isotopetable/isotopeitem.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/isotopetable/isotopescene.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/isotopetable/isotopetabledialog.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/isotopetable/isotopeview.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/kalzium.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/kalziumdataobject.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/kalziumelementproperty.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/kalziumgradienttype.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/kalziumnumerationtype.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/kalziumschemetype.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/kalziumunitcombobox.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/kalziumutils.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/kdeeduglossary.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/legendwidget.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/main.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/molcalcwidget.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/orbitswidget.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/psetable/elementitem.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/psetable/numerationitem.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/psetable/periodictablescene.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/psetable/periodictablestates.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/psetable/periodictableview.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/psetable/statemachine.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/rsdialog.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/search.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/searchwidget.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/spectrumviewimpl.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/spectrumwidget.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/tableinfowidget.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/tablesdialog.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/tools/moleculeview.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/tools/obconverter.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/unitsettingsdialog.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/compoundviewer/kalziumglwidget.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/compoundviewer/openbabel2wrapper.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/chemicaldataobject.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/element.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/elementparser.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/isotope.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/isotopeparser.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/moleculeparser.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/parser.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/psetables.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/spectrum.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/spectrumparser.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/concentrationPlasmoid/concentrationCalculator.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/concentrationPlasmoid/concentrationCalculatorConfig.ui">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/didyouknow/didyouknow.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/gasPlasmoid/gasCalculator.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/gasPlasmoid/gasCalculatorConfig.ui">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/nuclearPlasmoid/kalziumdataobject.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/nuclearPlasmoid/nuclearCalculator.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/nuclearPlasmoid/nuclearCalculatorConfig.ui">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/psePlasmoid/Molmasscalculator.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/psePlasmoid/Molmassconfig.ui">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/psePlasmoid/Periodictable.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/engine/kalzium_engine.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/calculator/calculator.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/calculator/calculator.ui">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/calculator/concCalculator.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/calculator/concCalculator.ui">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/calculator/gasCalculator.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/calculator/gasCalculator.ui">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/calculator/nuclearCalculator.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/calculator/nuclearCalculator.ui">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/calculator/settings_calc.ui">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/calculator/titrationCalculator.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/calculator/titrationCalculator.ui">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/detailedgraphicaloverview.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/detailinfodlg.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/elementdataviewer.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/eqchemview.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/equationview.ui">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/exportdialog.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/exportdialog.ui">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/gradientwidget.ui">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/gradientwidget_impl.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/isotopetable/informationitem.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/isotopetable/isotopedialog.ui">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/isotopetable/isotopeguideview.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/isotopetable/isotopeitem.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/isotopetable/isotopescene.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/isotopetable/isotopetabledialog.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/isotopetable/isotopeview.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/kalzium.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/kalziumdataobject.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/kalziumelementproperty.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/kalziumgradienttype.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/kalziumnumerationtype.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/kalziumschemetype.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/kalziumunitcombobox.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/kalziumutils.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/kdeeduglossary.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/legendwidget.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/molcalcwidget.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/molcalcwidgetbase.ui">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/orbitswidget.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/plotsetupwidget.ui">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/prefs.kcfgc">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/psetable/elementitem.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/psetable/numerationitem.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/psetable/periodictablescene.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/psetable/periodictablestates.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/psetable/periodictableview.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/psetable/statemachine.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/rsdialog.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/rswidget.ui">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/search.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/searchwidget.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/settings_colors.ui">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/settings_gradients.ui">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/spectrumview.ui">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/spectrumviewimpl.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/spectrumwidget.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/tableinfowidget.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/tablesdialog.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/tools/moleculeview.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/tools/moleculeviewerwidget.ui">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/tools/obconverter.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/tools/obconverterwidget.ui">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/unitsettingsdialog.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/KalziumConfigureChecks.cmake">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/config-kalzium.h.cmake">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\plasmoid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\plasmoid\applet\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/concentrationPlasmoid/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\plasmoid\applet\concentrationPlasmoid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/concentrationPlasmoid/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\plasmoid\applet\concentrationPlasmoid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/gasPlasmoid/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\plasmoid\applet\gasPlasmoid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/gasPlasmoid/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\plasmoid\applet\gasPlasmoid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/didyouknow/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\plasmoid\applet\didyouknow\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/nuclearPlasmoid/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\plasmoid\applet\nuclearPlasmoid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/nuclearPlasmoid/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\plasmoid\applet\nuclearPlasmoid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/psePlasmoid/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\plasmoid\applet\psePlasmoid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/engine/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\plasmoid\engine\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/share/ECM/cmake/ECMConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\ECM\cmake\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/share/ECM/cmake/ECMConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\ECM\cmake\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/share/ECM/cmake/ECMConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\ECM\cmake\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/share/ECM/cmake/ECMConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\ECM\cmake\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/share/ECM/modules/ECMUseFindModules.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\ECM\modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/share/ECM/modules/ECMUseFindModules.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\ECM\modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/share/ECM/modules/ECMEnableSanitizers.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\ECM\modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/share/ECM/modules/ECMCoverageOption.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\ECM\modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/share/ECM/modules/ECMInstallIcons.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\ECM\modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/share/ECM/modules/ECMMarkNonGuiExecutable.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\ECM\modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/share/ECM/find-modules/FindKF5.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\ECM\find-modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/share/ECM/kde-modules/KDEInstallDirs.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\ECM\kde-modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/share/ECM/kde-modules/KDECompilerSettings.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\ECM\kde-modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5/Qt5Config.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5CoreAddons/KF5CoreAddonsConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5CoreAddons\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5CoreAddons/KF5CoreAddonsConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5CoreAddons\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5CoreAddons/KF5CoreAddonsTargets.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5CoreAddons\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5CoreAddons/KF5CoreAddonsTargets-debian.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5CoreAddons\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5CoreAddons/KF5CoreAddonsMacros.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5CoreAddons\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5CoreAddons/KF5CoreAddonsConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5CoreAddons\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5CoreAddons/KF5CoreAddonsConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5CoreAddons\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5CoreAddons/KF5CoreAddonsTargets.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5CoreAddons\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5CoreAddons/KF5CoreAddonsMacros.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5CoreAddons\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Solid/KF5SolidConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Solid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Solid/KF5SolidConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Solid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Solid/KF5SolidTargets.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Solid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Solid/KF5SolidTargets-debian.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Solid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Solid/KF5SolidConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Solid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Solid/KF5SolidConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Solid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Solid/KF5SolidTargets.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Solid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Config/KF5ConfigConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Config\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Config/KF5ConfigConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Config\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Config/KF5ConfigTargets.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Config\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Config/KF5ConfigTargets-debian.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Config\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Config/KF5ConfigMacros.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Config\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Config/KF5ConfigConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Config\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Config/KF5ConfigConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Config\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Config/KF5ConfigTargets.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Config\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Config/KF5ConfigMacros.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Config\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Xml/Qt5XmlConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Xml\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Xml/Qt5XmlConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Xml\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5DocTools/KF5DocToolsConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5DocTools\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5DocTools/KF5DocToolsConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5DocTools\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5DocTools/KF5DocToolsTargets.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5DocTools\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5DocTools/KF5DocToolsTargets-debian.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5DocTools\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5DocTools/KF5DocToolsMacros.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5DocTools\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Archive/KF5ArchiveConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Archive\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Archive/KF5ArchiveConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Archive\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Archive/KF5ArchiveTargets.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Archive\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Archive/KF5ArchiveTargets-debian.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Archive\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/avogadro/AvogadroConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\avogadro\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/avogadro/AvogadroConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\avogadro\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/avogadro/1_1/AvogadroUse.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\avogadro\1_1\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/avogadro/1_1/AvogadroUse.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\avogadro\1_1\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/avogadro/1_1/cmake/FindEigen2.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\avogadro\1_1\cmake\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/avogadro/1_1/cmake/FindGLEW.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\avogadro\1_1\cmake\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/avogadro/1_1/cmake/FindEigen2.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\avogadro\1_1\cmake\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/avogadro/1_1/cmake/FindGLEW.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\avogadro\1_1\cmake\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/cmake/modules/FindOCaml.cmake">
+          <Option virtualFolder="CMake Files\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/cmake/modules/FindLibfacile.cmake">
+          <Option virtualFolder="CMake Files\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/cmake/modules/FindOCaml.cmake">
+          <Option virtualFolder="CMake Files\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/cmake/modules/FindOpenBabel2.cmake">
+          <Option virtualFolder="CMake Files\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/cmake/modules/FindEigen3.cmake">
+          <Option virtualFolder="CMake Files\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/compoundviewer/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\compoundviewer\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/doc/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\doc\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\src\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/CMakeOCamlInstructions.cmake">
+          <Option virtualFolder="CMake Files\src\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/data/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\data\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/data/hazardsymbols/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\data\hazardsymbols\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/data/htmlview/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\data\htmlview\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/data/icons/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\data\icons\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/data/iconsets/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\data\iconsets\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/data/iconsets/school/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\data\iconsets\school\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/data/toolpics/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\data\toolpics\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/data/latticeicons/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\data\latticeicons\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/data/maps/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\data\maps\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/data/molecules/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\data\molecules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\libscience\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/data/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\libscience\data\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/tests/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\libscience\tests\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/qml/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\qml\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>

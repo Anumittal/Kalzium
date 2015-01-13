@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="nuclearCalculator" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;CMake Files\plasmoid\;CMake Files\plasmoid\applet\;CMake Files\plasmoid\applet\concentrationPlasmoid\;CMake Files\plasmoid\applet\gasPlasmoid\;CMake Files\plasmoid\applet\didyouknow\;CMake Files\plasmoid\applet\nuclearPlasmoid\;CMake Files\plasmoid\applet\psePlasmoid\;CMake Files\plasmoid\engine\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\usr\;CMake Files\..\..\..\usr\share\;CMake Files\..\..\..\usr\share\ECM\;CMake Files\..\..\..\usr\share\ECM\cmake\;CMake Files\..\..\..\usr\share\ECM\modules\;CMake Files\..\..\..\usr\share\ECM\find-modules\;CMake Files\..\..\..\usr\share\ECM\kde-modules\;CMake Files\..\..\..\usr\lib\;CMake Files\..\..\..\usr\lib\i386-linux-gnu\;CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\;CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5\;CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Widgets\;CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Gui\;CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Core\;CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5CoreAddons\;CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Solid\;CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Config\;CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Xml\;CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5DocTools\;CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Archive\;CMake Files\..\..\..\usr\lib\avogadro\;CMake Files\..\..\..\usr\lib\avogadro\1_1\;CMake Files\..\..\..\usr\lib\avogadro\1_1\cmake\;CMake Files\cmake\;CMake Files\cmake\modules\;CMake Files\compoundviewer\;CMake Files\doc\;CMake Files\src\;CMake Files\data\;CMake Files\data\hazardsymbols\;CMake Files\data\htmlview\;CMake Files\data\icons\;CMake Files\data\iconsets\;CMake Files\data\iconsets\school\;CMake Files\data\toolpics\;CMake Files\data\latticeicons\;CMake Files\data\maps\;CMake Files\data\molecules\;CMake Files\libscience\;CMake Files\libscience\data\;CMake Files\libscience\tests\;CMake Files\qml\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="nuclearCalculator">
+         <Option output="/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid/libnuclearCalculator.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GNU_SOURCE" />
+            <Add option="-D_LARGEFILE64_SOURCE" />
+            <Add option="-D_FILE_OFFSET_BITS=64" />
+            <Add option="-DQT_USE_FAST_CONCATENATION" />
+            <Add option="-DQT_USE_FAST_OPERATOR_PLUS" />
+            <Add option="-DQT_XML_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtCore" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtXml" />
+            <Add directory="/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid/Makefile&quot;  VERBOSE=1 nuclearCalculator" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="nuclearCalculator/fast">
+         <Option output="/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid/libnuclearCalculator.so" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid" />
+         <Option object_output="./" />
+         <Option type="3" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-D_GNU_SOURCE" />
+            <Add option="-D_LARGEFILE64_SOURCE" />
+            <Add option="-D_FILE_OFFSET_BITS=64" />
+            <Add option="-DQT_USE_FAST_CONCATENATION" />
+            <Add option="-DQT_USE_FAST_OPERATOR_PLUS" />
+            <Add option="-DQT_XML_LIB" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtCore" />
+            <Add directory="/usr/include/i386-linux-gnu/qt5/QtXml" />
+            <Add directory="/usr/lib/i386-linux-gnu/qt5/mkspecs/linux-g++" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid/Makefile&quot;  VERBOSE=1 nuclearCalculator/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/nuclearPlasmoid/kalziumdataobject.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/nuclearPlasmoid/nuclearCalculator.cpp">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/nuclearPlasmoid/kalziumdataobject.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/nuclearPlasmoid/nuclearCalculator.h">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/nuclearPlasmoid/nuclearCalculatorConfig.ui">
+      </Unit>
+      <Unit filename="/home/anu/kalzium/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/KalziumConfigureChecks.cmake">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/config-kalzium.h.cmake">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\plasmoid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\plasmoid\applet\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/concentrationPlasmoid/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\plasmoid\applet\concentrationPlasmoid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/concentrationPlasmoid/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\plasmoid\applet\concentrationPlasmoid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/gasPlasmoid/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\plasmoid\applet\gasPlasmoid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/gasPlasmoid/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\plasmoid\applet\gasPlasmoid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/didyouknow/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\plasmoid\applet\didyouknow\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/nuclearPlasmoid/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\plasmoid\applet\nuclearPlasmoid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/nuclearPlasmoid/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\plasmoid\applet\nuclearPlasmoid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/applet/psePlasmoid/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\plasmoid\applet\psePlasmoid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/plasmoid/engine/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\plasmoid\engine\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/share/ECM/cmake/ECMConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\ECM\cmake\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/share/ECM/cmake/ECMConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\ECM\cmake\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/share/ECM/cmake/ECMConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\ECM\cmake\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/share/ECM/cmake/ECMConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\ECM\cmake\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/share/ECM/modules/ECMUseFindModules.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\ECM\modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/share/ECM/modules/ECMUseFindModules.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\ECM\modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/share/ECM/modules/ECMEnableSanitizers.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\ECM\modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/share/ECM/modules/ECMCoverageOption.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\ECM\modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/share/ECM/modules/ECMInstallIcons.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\ECM\modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/share/ECM/modules/ECMMarkNonGuiExecutable.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\ECM\modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/share/ECM/find-modules/FindKF5.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\ECM\find-modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/share/ECM/kde-modules/KDEInstallDirs.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\ECM\kde-modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/share/ECM/kde-modules/KDECompilerSettings.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\share\ECM\kde-modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5/Qt5Config.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Widgets\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5CoreAddons/KF5CoreAddonsConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5CoreAddons\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5CoreAddons/KF5CoreAddonsConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5CoreAddons\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5CoreAddons/KF5CoreAddonsTargets.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5CoreAddons\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5CoreAddons/KF5CoreAddonsTargets-debian.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5CoreAddons\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5CoreAddons/KF5CoreAddonsMacros.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5CoreAddons\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5CoreAddons/KF5CoreAddonsConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5CoreAddons\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5CoreAddons/KF5CoreAddonsConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5CoreAddons\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5CoreAddons/KF5CoreAddonsTargets.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5CoreAddons\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5CoreAddons/KF5CoreAddonsMacros.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5CoreAddons\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Solid/KF5SolidConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Solid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Solid/KF5SolidConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Solid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Solid/KF5SolidTargets.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Solid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Solid/KF5SolidTargets-debian.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Solid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Solid/KF5SolidConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Solid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Solid/KF5SolidConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Solid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Solid/KF5SolidTargets.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Solid\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Config/KF5ConfigConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Config\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Config/KF5ConfigConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Config\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Config/KF5ConfigTargets.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Config\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Config/KF5ConfigTargets-debian.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Config\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Config/KF5ConfigMacros.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Config\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Config/KF5ConfigConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Config\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Config/KF5ConfigConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Config\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Config/KF5ConfigTargets.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Config\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Config/KF5ConfigMacros.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Config\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Xml/Qt5XmlConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Xml\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/Qt5Xml/Qt5XmlConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\Qt5Xml\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5DocTools/KF5DocToolsConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5DocTools\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5DocTools/KF5DocToolsConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5DocTools\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5DocTools/KF5DocToolsTargets.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5DocTools\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5DocTools/KF5DocToolsTargets-debian.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5DocTools\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5DocTools/KF5DocToolsMacros.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5DocTools\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Archive/KF5ArchiveConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Archive\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Archive/KF5ArchiveConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Archive\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Archive/KF5ArchiveTargets.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Archive\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/i386-linux-gnu/cmake/KF5Archive/KF5ArchiveTargets-debian.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\i386-linux-gnu\cmake\KF5Archive\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/avogadro/AvogadroConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\avogadro\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/avogadro/AvogadroConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\avogadro\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/avogadro/1_1/AvogadroUse.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\avogadro\1_1\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/avogadro/1_1/AvogadroUse.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\avogadro\1_1\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/avogadro/1_1/cmake/FindEigen2.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\avogadro\1_1\cmake\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/avogadro/1_1/cmake/FindGLEW.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\avogadro\1_1\cmake\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/avogadro/1_1/cmake/FindEigen2.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\avogadro\1_1\cmake\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/../../../usr/lib/avogadro/1_1/cmake/FindGLEW.cmake">
+          <Option virtualFolder="CMake Files\..\..\..\usr\lib\avogadro\1_1\cmake\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/cmake/modules/FindOCaml.cmake">
+          <Option virtualFolder="CMake Files\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/cmake/modules/FindLibfacile.cmake">
+          <Option virtualFolder="CMake Files\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/cmake/modules/FindOCaml.cmake">
+          <Option virtualFolder="CMake Files\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/cmake/modules/FindOpenBabel2.cmake">
+          <Option virtualFolder="CMake Files\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/cmake/modules/FindEigen3.cmake">
+          <Option virtualFolder="CMake Files\cmake\modules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/compoundviewer/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\compoundviewer\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/doc/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\doc\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\src\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/src/CMakeOCamlInstructions.cmake">
+          <Option virtualFolder="CMake Files\src\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/data/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\data\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/data/hazardsymbols/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\data\hazardsymbols\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/data/htmlview/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\data\htmlview\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/data/icons/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\data\icons\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/data/iconsets/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\data\iconsets\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/data/iconsets/school/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\data\iconsets\school\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/data/toolpics/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\data\toolpics\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/data/latticeicons/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\data\latticeicons\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/data/maps/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\data\maps\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/data/molecules/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\data\molecules\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\libscience\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/data/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\libscience\data\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/libscience/tests/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\libscience\tests\" />
+      </Unit>
+      <Unit filename="/home/anu/kalzium/qml/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\qml\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>

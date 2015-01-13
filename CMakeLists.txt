@@ -2,8 +2,9 @@ project(kalzium)
 cmake_minimum_required(VERSION 2.8.12)
 
 find_package(ECM 0.0.11 REQUIRED NO_MODULE)
-set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR} ${OPENBABEL2_INCLUDE_DIR})
 
+find_package(OpenBabel2 REQUIRED)
 find_package(Qt5 REQUIRED COMPONENTS Widgets)
 find_package(KF5 REQUIRED COMPONENTS CoreAddons Solid Config)
 find_package(KF5DocTools REQUIRED)
@@ -11,28 +12,22 @@ find_package(Qt5Widgets REQUIRED)
 find_package(PkgConfig REQUIRED)
 find_package(KF5CoreAddons REQUIRED)
 find_package(KF5Config REQUIRED)
-find_package(KF5Solid REQUIRED)  
-#find_package(Qt4 REQUIRED)
-#find_package(Eigen2 REQUIRED)
+find_package(KF5Solid REQUIRED)
 find_package(ECM REQUIRED)
 find_package(Qt5Core REQUIRED)
 find_package(Qt5Gui REQUIRED)
-#ECM (required version >= 0.0.11)
-#Qt5Core (required version >= 5.3.0)
-#Qt5Gui (required version >= 5.3.0)
 
 include(KDEInstallDirs)
 include(KDECompilerSettings)
-#include(KDECMakeSetting)
 include(FeatureSummary)
 include(ECMInstallIcons)
 include(ECMMarkNonGuiExecutable)
+include_directories(${OPENBABEL2_INCLUDE_DIR})
 
 
 set(CMAKE_MODULE_PATH ${kalzium_SOURCE_DIR}/cmake/modules )
 
 # search packages used by KDE 
-#find_package(KDE4 4.6.80 REQUIRED)
 if(WIN32)
   find_package(KDEWIN32 REQUIRED)
   # detect oxygen icon dir at configure time based on KDEDIRS - there may be different package installation locations
@@ -40,26 +35,20 @@ if(WIN32)
   #file(TO_CMAKE_PATH "${_dir}" __dir)
   #find_path(KDE4_ICON_DIR oxygen PATHS
    #  ${__dir})
-  #message(STATUS "using oxygen application icons from ${KDE4_ICON_DIR}")
+ # message(STATUS "using oxygen application icons from ${KDE4_ICON_DIR}")
 else(WIN32)
-  #set (KDE4_ICON_DIR  ${CMAKE_INSTALL_PREFIX}/share/icons)
+ # set (KDE4_ICON_DIR  ${CMAKE_INSTALL_PREFIX}/share/icons)
 endif(WIN32)
 
-#include(KDE4Defaults)
-#include(MacroLibrary)
-#include(MacroOptionalAddSubdirectory)
-#include(MacroBoolTo01)
-
-#add_definitions (${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
+add_definitions (${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
 add_definitions(-DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
-#include_directories (${QDBUS_INCLUDE_DIRS}  ${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} #${KDE4_INCLUDES} libscience)
+#include_directories (${QDBUS_INCLUDE_DIRS}  ${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${KDE4_INCLUDES} libscience)
 if(MSVC)
 # for correctly linking openbabel:
 # see http://www.mail-archive.com/openbabel-devel@lists.sourceforge.net/msg01975.html
 add_definitions(-DUSING_DYNAMIC_LIBS)
 endif(MSVC)
 
-#no_enable_final(kalzium)
 
 include(KalziumConfigureChecks.cmake)
 
@@ -84,7 +73,5 @@ add_subdirectory(qml)
 
 
 install(FILES kalzium.appdata.xml DESTINATION ${SHARE_INSTALL_PREFIX}/appdata/)
-
-#macro_display_feature_log()
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)

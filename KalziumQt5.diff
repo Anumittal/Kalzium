@@ -1,0 +1,939 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index f4ab27b..1c86cc1 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1,37 +1,65 @@
+ project(kalzium)
++cmake_minimum_required(VERSION 2.8.12)
++
++find_package(ECM 0.0.11 REQUIRED NO_MODULE)
++set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
++
++find_package(Qt5 REQUIRED COMPONENTS Widgets)
++find_package(KF5 REQUIRED COMPONENTS CoreAddons Solid Config)
++find_package(KF5DocTools REQUIRED)
++find_package(Qt5Widgets REQUIRED)
++find_package(PkgConfig REQUIRED)
++find_package(KF5CoreAddons REQUIRED)
++find_package(KF5Config REQUIRED)
++find_package(KF5Solid REQUIRED)  
++#find_package(Qt4 REQUIRED)
++#find_package(Eigen2 REQUIRED)
++find_package(ECM REQUIRED)
++find_package(Qt5Core REQUIRED)
++find_package(Qt5Gui REQUIRED)
++#ECM (required version >= 0.0.11)
++#Qt5Core (required version >= 5.3.0)
++#Qt5Gui (required version >= 5.3.0)
++
++include(KDEInstallDirs)
++include(KDECompilerSettings)
++#include(KDECMakeSetting)
++include(FeatureSummary)
++include(ECMInstallIcons)
++include(ECMMarkNonGuiExecutable)
++
+ 
+ set(CMAKE_MODULE_PATH ${kalzium_SOURCE_DIR}/cmake/modules )
+ 
+-# search packages used by KDE
+-find_package(KDE4 4.6.80 REQUIRED)
++# search packages used by KDE 
++#find_package(KDE4 4.6.80 REQUIRED)
+ if(WIN32)
+   find_package(KDEWIN32 REQUIRED)
+   # detect oxygen icon dir at configure time based on KDEDIRS - there may be different package installation locations
+-  execute_process(COMMAND "${KDE4_KDECONFIG_EXECUTABLE}" --path icon OUTPUT_VARIABLE _dir ERROR_QUIET OUTPUT_STRIP_TRAILING_WHITESPACE)
+-  file(TO_CMAKE_PATH "${_dir}" __dir)
+-  find_path(KDE4_ICON_DIR oxygen PATHS
+-      ${__dir}
+-  )
+-  message(STATUS "using oxygen application icons from ${KDE4_ICON_DIR}")
++ #execute_process(COMMAND "${KDE4_KDECONFIG_EXECUTABLE}" --path icon OUTPUT_VARIABLE _dir #ERROR_QUIET OUTPUT_STRIP_TRAILING_WHITESPACE)
++  #file(TO_CMAKE_PATH "${_dir}" __dir)
++  #find_path(KDE4_ICON_DIR oxygen PATHS
++   #  ${__dir})
++  #message(STATUS "using oxygen application icons from ${KDE4_ICON_DIR}")
+ else(WIN32)
+-    set (KDE4_ICON_DIR  ${CMAKE_INSTALL_PREFIX}/share/icons)
++  #set (KDE4_ICON_DIR  ${CMAKE_INSTALL_PREFIX}/share/icons)
+ endif(WIN32)
+ 
+-include(KDE4Defaults)
+-include(MacroLibrary)
+-include(MacroOptionalAddSubdirectory)
+-include(MacroBoolTo01)
++#include(KDE4Defaults)
++#include(MacroLibrary)
++#include(MacroOptionalAddSubdirectory)
++#include(MacroBoolTo01)
+ 
+-add_definitions (${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
++#add_definitions (${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
+ add_definitions(-DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
+-include_directories (${QDBUS_INCLUDE_DIRS}  ${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} ${KDE4_INCLUDES} libscience)
++#include_directories (${QDBUS_INCLUDE_DIRS}  ${CMAKE_SOURCE_DIR} ${CMAKE_BINARY_DIR} #${KDE4_INCLUDES} libscience)
+ if(MSVC)
+ # for correctly linking openbabel:
+ # see http://www.mail-archive.com/openbabel-devel@lists.sourceforge.net/msg01975.html
+ add_definitions(-DUSING_DYNAMIC_LIBS)
+ endif(MSVC)
+ 
+-kde4_no_enable_final(kalzium)
++#no_enable_final(kalzium)
+ 
+ include(KalziumConfigureChecks.cmake)
+ 
+@@ -54,7 +82,9 @@ add_subdirectory(plasmoid)
+ add_subdirectory(libscience)
+ add_subdirectory(qml)
+ 
++
+ install(FILES kalzium.appdata.xml DESTINATION ${SHARE_INSTALL_PREFIX}/appdata/)
+ 
+-macro_display_feature_log()
++#macro_display_feature_log()
+ 
++feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
+diff --git a/KalziumConfigureChecks.cmake b/KalziumConfigureChecks.cmake
+index e3197ac..65ba760 100644
+--- a/KalziumConfigureChecks.cmake
++++ b/KalziumConfigureChecks.cmake
+@@ -1,21 +1,24 @@
+ include(CheckIncludeFiles)
+ include(CheckFunctionExists)
+ 
+-macro_optional_find_package(OCaml)
+-macro_optional_find_package(Libfacile)
+-macro_optional_find_package(OpenBabel2)
+-macro_optional_find_package(Eigen3)
+-macro_optional_find_package(Avogadro 1.0.0 NO_MODULE)
++find_package(OCaml)
++find_package(Libfacile)
++find_package(OpenBabel2)
++find_package(Eigen3)
++find_package(Avogadro 1.0.0 NO_MODULE)
+ 
+ find_package(PkgConfig)
+ pkg_check_modules(CHEMICAL_MIME_DATA chemical-mime-data)
+-
++include(CheckIncludeFiles)
+ check_include_files(ieeefp.h HAVE_IEEEFP_H)
+-
+-macro_bool_to_01(LIBFACILE_FOUND HAVE_FACILE)
+-macro_bool_to_01(OPENBABEL2_FOUND HAVE_OPENBABEL2)
+-macro_bool_to_01(EIGEN3_FOUND HAVE_EIGEN)
+-macro_bool_to_01(Avogadro_FOUND HAVE_AVOGADRO)
++set(HAVE_FACILE ${LIBFACILE_FOUND})
++set(HAVE_OPENBABEL2 ${OPENBABEL2_FOUND})
++set(HAVE_EIGEN ${EIGEN3_FOUND})
++set(HAVE_AVOGADRO ${Avogadro_FOUND})
++#macro_bool_to_01(LIBFACILE_FOUND HAVE_FACILE)
++#macro_bool_to_01(OPENBABEL2_FOUND HAVE_OPENBABEL2)
++#macro_bool_to_01(EIGEN3_FOUND HAVE_EIGEN)
++#macro_bool_to_01(Avogadro_FOUND HAVE_AVOGADRO)
+ 
+ # at the end, output the configuration
+ configure_file(
+@@ -23,10 +26,10 @@ configure_file(
+    ${CMAKE_CURRENT_BINARY_DIR}/config-kalzium.h
+ )
+ 
+-macro_log_feature(OCAML_FOUND "OCaml" "OCaml is needed by Kalzium for the Equation Solver" "http://caml.inria.fr/" FALSE "" "")
+-macro_log_feature(LIBFACILE_FOUND "LibFacile" "libfacile is needed by Kalzium for the Equation Solver." "http://www.recherche.enac.fr/log/facile/" FALSE "" "")
+-macro_log_feature(OPENBABEL2_FOUND "OpenBabel2" "OpenBabel is needed by Kalzium for the 3D-molecule viewer" "http://openbabel.sourceforge.net/" FALSE "2.2" "")
+-macro_log_feature(EIGEN3_FOUND "Eigen3" "A generic C++ template library for dense and sparse matrices" "http://eigen.tuxfamily.org" FALSE "3.0.0" "")
+-macro_log_feature(Avogadro_FOUND "Avogadro" "Advanced molecular editor" "http://avogadro.openmolecules.net" FALSE "1.0" "")
+-macro_log_feature(CHEMICAL_MIME_DATA_FOUND "Chemical mime data" "Needed to open CML molecules from the file manager" "http://chemical-mime.sourceforge.net/" FALSE "" "")
+-
++#set_package_properties(OCAML_FOUND "OCaml" "http://caml.inria.fr/"  FALSE "OCaml is needed by Kalzium for the Equation Solver")
++#(OCAML_FOUND "OCaml" "OCaml is needed by Kalzium for the Equation Solver" "http://caml.inria.fr/" FALSE "" "")
++#set_package_properties(LIBFACILE_FOUND "LibFacile" "libfacile is needed by Kalzium for the Equation Solver." "http://www.recherche.enac.fr/log/facile/" FALSE "" "")
++#set_package_properties(OPENBABEL2_FOUND "OpenBabel2" "OpenBabel is needed by Kalzium for the 3D-molecule viewer" "http://openbabel.sourceforge.net/" FALSE "2.2" "")
++#set_package_properties(EIGEN3_FOUND "Eigen3" "A generic C++ template library for dense and sparse matrices" "http://eigen.tuxfamily.org" FALSE "3.0.0" "")
++#set_package_properties(Avogadro_FOUND "Avogadro" "Advanced molecular editor" "http://avogadro.openmolecules.net" FALSE "1.0" "")
++#set_package_properties(CHEMICAL_MIME_DATA_FOUND "Chemical mime data" "Needed to open CML molecules from the file manager" "http://chemical-mime.sourceforge.net/" FALSE "" "")
+\ No newline at end of file
+diff --git a/compoundviewer/CMakeLists.txt b/compoundviewer/CMakeLists.txt
+index 0971248..9530de2 100644
+--- a/compoundviewer/CMakeLists.txt
++++ b/compoundviewer/CMakeLists.txt
+@@ -1,10 +1,8 @@
+ include(${Avogadro_USE_FILE})
+ 
+-include_directories(
+-  ${CMAKE_CURRENT_BINARY_DIR}/..
+-  ${EIGEN3_INCLUDE_DIR}
+-  ${OPENBABEL2_INCLUDE_DIR}
+-  )
++#include_directories( ${CMAKE_CURRENT_BINARY_DIR}/..
++ # ${EIGEN3_INCLUDE_DIR}
++  #${OPENBABEL2_INCLUDE_DIR})
+ 
+ set( compoundviewer_SRCS
+   openbabel2wrapper.cpp
+@@ -13,12 +11,12 @@ set( compoundviewer_SRCS
+ 
+ #add_subdirectory(widgets)
+ 
+-kde4_add_library(compoundviewer SHARED ${compoundviewer_SRCS})
++add_library(compoundviewer SHARED ${compoundviewer_SRCS})
+ 
+ target_link_libraries(compoundviewer
+    ${OPENBABEL2_LIBRARIES}
+-   ${QT_QTOPENGL_LIBRARY}
+-   ${KDE4_KDEUI_LIBS}
++   Qt5::OpenGL
++   KF5::WidgetsAddons
+    avogadro
+ )
+ 
+diff --git a/compoundviewer/widgets/CMakeLists.txt b/compoundviewer/widgets/CMakeLists.txt
+index 32f200a..08dc7ff 100644
+--- a/compoundviewer/widgets/CMakeLists.txt
++++ b/compoundviewer/widgets/CMakeLists.txt
+@@ -7,10 +7,10 @@ set(kalziumui_PART_SRCS
+ # nothing left here!
+    )
+ 
+-kde4_add_widget_files(kalziumui_PART_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/kalziumui.widgets)
++add_widget_files(kalziumui_PART_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/kalziumui.widgets)
+ 
+-kde4_add_plugin(kalziumuiwidgets ${kalziumui_PART_SRCS})
++add_library(kalziumuiwidgets ${kalziumui_PART_SRCS})
+ 
+-target_link_libraries(kalziumuiwidgets ${OPENBABEL2_LIBRARIES} ${QT_QTDESIGNER_LIBRARY} ${KDE4_KDECORE_LIBS})
++target_link_libraries(kalziumuiwidgets ${OPENBABEL2_LIBRARIES} ${Qt5::Designer} ${KF5::Core})
+ 
+ install(TARGETS kalziumuiwidgets DESTINATION ${PLUGIN_INSTALL_DIR}/plugins/designer)
+diff --git a/data/icons/CMakeLists.txt b/data/icons/CMakeLists.txt
+index 779ced5..b3f48c8 100644
+--- a/data/icons/CMakeLists.txt
++++ b/data/icons/CMakeLists.txt
+@@ -1,3 +1,3 @@
+ 
+-kde4_install_icons( ${DATA_INSTALL_DIR}/kalzium/icons  )
++ecm_install_icons(${DATA_INSTALL_DIR}/kalzium/icons)
+ 
+diff --git a/data/icons/hi16-actions-calculate.png b/data/icons/hi16-actions-calculate.png
+new file mode 100644
+index 0000000..428102f
+Binary files /dev/null and b/data/icons/hi16-actions-calculate.png differ
+diff --git a/data/icons/hi16-actions-chemical.png b/data/icons/hi16-actions-chemical.png
+new file mode 100644
+index 0000000..94a05eb
+Binary files /dev/null and b/data/icons/hi16-actions-chemical.png differ
+diff --git a/data/icons/hi16-actions-elempic.png b/data/icons/hi16-actions-elempic.png
+new file mode 100644
+index 0000000..7c8b6ca
+Binary files /dev/null and b/data/icons/hi16-actions-elempic.png differ
+diff --git a/data/icons/hi16-actions-energies.png b/data/icons/hi16-actions-energies.png
+new file mode 100644
+index 0000000..0ca8061
+Binary files /dev/null and b/data/icons/hi16-actions-energies.png differ
+diff --git a/data/icons/hi16-actions-eqchem.png b/data/icons/hi16-actions-eqchem.png
+new file mode 100644
+index 0000000..6814438
+Binary files /dev/null and b/data/icons/hi16-actions-eqchem.png differ
+diff --git a/data/icons/hi16-actions-glossary.png b/data/icons/hi16-actions-glossary.png
+new file mode 100644
+index 0000000..5f637c4
+Binary files /dev/null and b/data/icons/hi16-actions-glossary.png differ
+diff --git a/data/icons/hi16-actions-isotopemap.png b/data/icons/hi16-actions-isotopemap.png
+new file mode 100644
+index 0000000..8c92ed5
+Binary files /dev/null and b/data/icons/hi16-actions-isotopemap.png differ
+diff --git a/data/icons/hi16-actions-kalzium_molviewer.png b/data/icons/hi16-actions-kalzium_molviewer.png
+new file mode 100644
+index 0000000..8dad197
+Binary files /dev/null and b/data/icons/hi16-actions-kalzium_molviewer.png differ
+diff --git a/data/icons/hi16-actions-kalzium_rs.png b/data/icons/hi16-actions-kalzium_rs.png
+new file mode 100644
+index 0000000..67cb267
+Binary files /dev/null and b/data/icons/hi16-actions-kalzium_rs.png differ
+diff --git a/data/icons/hi16-actions-kalzium_tables.png b/data/icons/hi16-actions-kalzium_tables.png
+new file mode 100644
+index 0000000..b84d9fb
+Binary files /dev/null and b/data/icons/hi16-actions-kalzium_tables.png differ
+diff --git a/data/icons/hi16-actions-legend.png b/data/icons/hi16-actions-legend.png
+new file mode 100644
+index 0000000..9e3b294
+Binary files /dev/null and b/data/icons/hi16-actions-legend.png differ
+diff --git a/data/icons/hi16-actions-misc.png b/data/icons/hi16-actions-misc.png
+new file mode 100644
+index 0000000..88f0b0b
+Binary files /dev/null and b/data/icons/hi16-actions-misc.png differ
+diff --git a/data/icons/hi16-actions-numbers.png b/data/icons/hi16-actions-numbers.png
+new file mode 100644
+index 0000000..c303cc6
+Binary files /dev/null and b/data/icons/hi16-actions-numbers.png differ
+diff --git a/data/icons/hi16-actions-orbits.png b/data/icons/hi16-actions-orbits.png
+new file mode 100644
+index 0000000..7971795
+Binary files /dev/null and b/data/icons/hi16-actions-orbits.png differ
+diff --git a/data/icons/hi16-actions-overview.png b/data/icons/hi16-actions-overview.png
+new file mode 100644
+index 0000000..ab9fc71
+Binary files /dev/null and b/data/icons/hi16-actions-overview.png differ
+diff --git a/data/icons/hi16-actions-plot.png b/data/icons/hi16-actions-plot.png
+new file mode 100644
+index 0000000..660d57c
+Binary files /dev/null and b/data/icons/hi16-actions-plot.png differ
+diff --git a/data/icons/hi16-actions-sidebar.png b/data/icons/hi16-actions-sidebar.png
+new file mode 100644
+index 0000000..36eb464
+Binary files /dev/null and b/data/icons/hi16-actions-sidebar.png differ
+diff --git a/data/icons/hi16-actions-spectrum.png b/data/icons/hi16-actions-spectrum.png
+new file mode 100644
+index 0000000..5a61b88
+Binary files /dev/null and b/data/icons/hi16-actions-spectrum.png differ
+diff --git a/data/icons/hi16-actions-statematter.png b/data/icons/hi16-actions-statematter.png
+new file mode 100644
+index 0000000..d75e317
+Binary files /dev/null and b/data/icons/hi16-actions-statematter.png differ
+diff --git a/data/icons/hi16-actions-timeline.png b/data/icons/hi16-actions-timeline.png
+new file mode 100644
+index 0000000..0dedbf6
+Binary files /dev/null and b/data/icons/hi16-actions-timeline.png differ
+diff --git a/data/icons/hi16-actions-tooltip.png b/data/icons/hi16-actions-tooltip.png
+new file mode 100644
+index 0000000..6005b39
+Binary files /dev/null and b/data/icons/hi16-actions-tooltip.png differ
+diff --git a/data/icons/hi22-actions-calculate.png b/data/icons/hi22-actions-calculate.png
+new file mode 100644
+index 0000000..8c47c68
+Binary files /dev/null and b/data/icons/hi22-actions-calculate.png differ
+diff --git a/data/icons/hi22-actions-chemical.png b/data/icons/hi22-actions-chemical.png
+new file mode 100644
+index 0000000..5ec49cc
+Binary files /dev/null and b/data/icons/hi22-actions-chemical.png differ
+diff --git a/data/icons/hi22-actions-elempic.png b/data/icons/hi22-actions-elempic.png
+new file mode 100644
+index 0000000..858a4f3
+Binary files /dev/null and b/data/icons/hi22-actions-elempic.png differ
+diff --git a/data/icons/hi22-actions-energies.png b/data/icons/hi22-actions-energies.png
+new file mode 100644
+index 0000000..d643d6a
+Binary files /dev/null and b/data/icons/hi22-actions-energies.png differ
+diff --git a/data/icons/hi22-actions-eqchem.png b/data/icons/hi22-actions-eqchem.png
+new file mode 100644
+index 0000000..638b666
+Binary files /dev/null and b/data/icons/hi22-actions-eqchem.png differ
+diff --git a/data/icons/hi22-actions-glossary.png b/data/icons/hi22-actions-glossary.png
+new file mode 100644
+index 0000000..d88ee90
+Binary files /dev/null and b/data/icons/hi22-actions-glossary.png differ
+diff --git a/data/icons/hi22-actions-isotopemap.png b/data/icons/hi22-actions-isotopemap.png
+new file mode 100644
+index 0000000..3dde99c
+Binary files /dev/null and b/data/icons/hi22-actions-isotopemap.png differ
+diff --git a/data/icons/hi22-actions-kalzium_molviewer.png b/data/icons/hi22-actions-kalzium_molviewer.png
+new file mode 100644
+index 0000000..cfea020
+Binary files /dev/null and b/data/icons/hi22-actions-kalzium_molviewer.png differ
+diff --git a/data/icons/hi22-actions-kalzium_rs.png b/data/icons/hi22-actions-kalzium_rs.png
+new file mode 100644
+index 0000000..0128d33
+Binary files /dev/null and b/data/icons/hi22-actions-kalzium_rs.png differ
+diff --git a/data/icons/hi22-actions-kalzium_tables.png b/data/icons/hi22-actions-kalzium_tables.png
+new file mode 100644
+index 0000000..7e41ee5
+Binary files /dev/null and b/data/icons/hi22-actions-kalzium_tables.png differ
+diff --git a/data/icons/hi22-actions-legend.png b/data/icons/hi22-actions-legend.png
+new file mode 100644
+index 0000000..e63b834
+Binary files /dev/null and b/data/icons/hi22-actions-legend.png differ
+diff --git a/data/icons/hi22-actions-numbers.png b/data/icons/hi22-actions-numbers.png
+new file mode 100644
+index 0000000..d2c6f99
+Binary files /dev/null and b/data/icons/hi22-actions-numbers.png differ
+diff --git a/data/icons/hi22-actions-orbits.png b/data/icons/hi22-actions-orbits.png
+new file mode 100644
+index 0000000..40706ab
+Binary files /dev/null and b/data/icons/hi22-actions-orbits.png differ
+diff --git a/data/icons/hi22-actions-overview.png b/data/icons/hi22-actions-overview.png
+new file mode 100644
+index 0000000..85a1b46
+Binary files /dev/null and b/data/icons/hi22-actions-overview.png differ
+diff --git a/data/icons/hi22-actions-plot.png b/data/icons/hi22-actions-plot.png
+new file mode 100644
+index 0000000..f898672
+Binary files /dev/null and b/data/icons/hi22-actions-plot.png differ
+diff --git a/data/icons/hi22-actions-sidebar.png b/data/icons/hi22-actions-sidebar.png
+new file mode 100644
+index 0000000..d0a668d
+Binary files /dev/null and b/data/icons/hi22-actions-sidebar.png differ
+diff --git a/data/icons/hi22-actions-spectrum.png b/data/icons/hi22-actions-spectrum.png
+new file mode 100644
+index 0000000..88b2c9b
+Binary files /dev/null and b/data/icons/hi22-actions-spectrum.png differ
+diff --git a/data/icons/hi22-actions-statematter.png b/data/icons/hi22-actions-statematter.png
+new file mode 100644
+index 0000000..1ec1247
+Binary files /dev/null and b/data/icons/hi22-actions-statematter.png differ
+diff --git a/data/icons/hi22-actions-timeline.png b/data/icons/hi22-actions-timeline.png
+new file mode 100644
+index 0000000..83ee6f6
+Binary files /dev/null and b/data/icons/hi22-actions-timeline.png differ
+diff --git a/data/icons/hi22-actions-tooltip.png b/data/icons/hi22-actions-tooltip.png
+new file mode 100644
+index 0000000..6ad67be
+Binary files /dev/null and b/data/icons/hi22-actions-tooltip.png differ
+diff --git a/data/icons/hi32-actions-calculate.png b/data/icons/hi32-actions-calculate.png
+new file mode 100644
+index 0000000..1b1dd1e
+Binary files /dev/null and b/data/icons/hi32-actions-calculate.png differ
+diff --git a/data/icons/hi32-actions-chemical.png b/data/icons/hi32-actions-chemical.png
+new file mode 100644
+index 0000000..e88b483
+Binary files /dev/null and b/data/icons/hi32-actions-chemical.png differ
+diff --git a/data/icons/hi32-actions-elempic.png b/data/icons/hi32-actions-elempic.png
+new file mode 100644
+index 0000000..8f58c96
+Binary files /dev/null and b/data/icons/hi32-actions-elempic.png differ
+diff --git a/data/icons/hi32-actions-energies.png b/data/icons/hi32-actions-energies.png
+new file mode 100644
+index 0000000..1dfd68f
+Binary files /dev/null and b/data/icons/hi32-actions-energies.png differ
+diff --git a/data/icons/hi32-actions-eqchem.png b/data/icons/hi32-actions-eqchem.png
+new file mode 100644
+index 0000000..fea9d64
+Binary files /dev/null and b/data/icons/hi32-actions-eqchem.png differ
+diff --git a/data/icons/hi32-actions-glossary.png b/data/icons/hi32-actions-glossary.png
+new file mode 100644
+index 0000000..8c3c9b3
+Binary files /dev/null and b/data/icons/hi32-actions-glossary.png differ
+diff --git a/data/icons/hi32-actions-isotopemap.png b/data/icons/hi32-actions-isotopemap.png
+new file mode 100644
+index 0000000..eb0b319
+Binary files /dev/null and b/data/icons/hi32-actions-isotopemap.png differ
+diff --git a/data/icons/hi32-actions-kalzium_molviewer.png b/data/icons/hi32-actions-kalzium_molviewer.png
+new file mode 100644
+index 0000000..9834b0e
+Binary files /dev/null and b/data/icons/hi32-actions-kalzium_molviewer.png differ
+diff --git a/data/icons/hi32-actions-kalzium_rs.png b/data/icons/hi32-actions-kalzium_rs.png
+new file mode 100644
+index 0000000..c8db2f8
+Binary files /dev/null and b/data/icons/hi32-actions-kalzium_rs.png differ
+diff --git a/data/icons/hi32-actions-kalzium_tables.png b/data/icons/hi32-actions-kalzium_tables.png
+new file mode 100644
+index 0000000..b35ff12
+Binary files /dev/null and b/data/icons/hi32-actions-kalzium_tables.png differ
+diff --git a/data/icons/hi32-actions-legend.png b/data/icons/hi32-actions-legend.png
+new file mode 100644
+index 0000000..6922a4e
+Binary files /dev/null and b/data/icons/hi32-actions-legend.png differ
+diff --git a/data/icons/hi32-actions-misc.png b/data/icons/hi32-actions-misc.png
+new file mode 100644
+index 0000000..16c7264
+Binary files /dev/null and b/data/icons/hi32-actions-misc.png differ
+diff --git a/data/icons/hi32-actions-numbers.png b/data/icons/hi32-actions-numbers.png
+new file mode 100644
+index 0000000..3d322fb
+Binary files /dev/null and b/data/icons/hi32-actions-numbers.png differ
+diff --git a/data/icons/hi32-actions-orbits.png b/data/icons/hi32-actions-orbits.png
+new file mode 100644
+index 0000000..abba256
+Binary files /dev/null and b/data/icons/hi32-actions-orbits.png differ
+diff --git a/data/icons/hi32-actions-overview.png b/data/icons/hi32-actions-overview.png
+new file mode 100644
+index 0000000..d09cdcf
+Binary files /dev/null and b/data/icons/hi32-actions-overview.png differ
+diff --git a/data/icons/hi32-actions-plot.png b/data/icons/hi32-actions-plot.png
+new file mode 100644
+index 0000000..706eadb
+Binary files /dev/null and b/data/icons/hi32-actions-plot.png differ
+diff --git a/data/icons/hi32-actions-sidebar.png b/data/icons/hi32-actions-sidebar.png
+new file mode 100644
+index 0000000..69413d9
+Binary files /dev/null and b/data/icons/hi32-actions-sidebar.png differ
+diff --git a/data/icons/hi32-actions-spectrum.png b/data/icons/hi32-actions-spectrum.png
+new file mode 100644
+index 0000000..1b5924b
+Binary files /dev/null and b/data/icons/hi32-actions-spectrum.png differ
+diff --git a/data/icons/hi32-actions-statematter.png b/data/icons/hi32-actions-statematter.png
+new file mode 100644
+index 0000000..36fc67c
+Binary files /dev/null and b/data/icons/hi32-actions-statematter.png differ
+diff --git a/data/icons/hi32-actions-timeline.png b/data/icons/hi32-actions-timeline.png
+new file mode 100644
+index 0000000..f0dc75d
+Binary files /dev/null and b/data/icons/hi32-actions-timeline.png differ
+diff --git a/data/icons/hi32-actions-tooltip.png b/data/icons/hi32-actions-tooltip.png
+new file mode 100644
+index 0000000..67c02f0
+Binary files /dev/null and b/data/icons/hi32-actions-tooltip.png differ
+diff --git a/data/icons/hi48-actions-calculate.png b/data/icons/hi48-actions-calculate.png
+new file mode 100644
+index 0000000..13e3afa
+Binary files /dev/null and b/data/icons/hi48-actions-calculate.png differ
+diff --git a/data/icons/hi48-actions-chemical.png b/data/icons/hi48-actions-chemical.png
+new file mode 100644
+index 0000000..9585a49
+Binary files /dev/null and b/data/icons/hi48-actions-chemical.png differ
+diff --git a/data/icons/hi48-actions-energies.png b/data/icons/hi48-actions-energies.png
+new file mode 100644
+index 0000000..f57de66
+Binary files /dev/null and b/data/icons/hi48-actions-energies.png differ
+diff --git a/data/icons/hi48-actions-eqchem.png b/data/icons/hi48-actions-eqchem.png
+new file mode 100644
+index 0000000..dcfb42a
+Binary files /dev/null and b/data/icons/hi48-actions-eqchem.png differ
+diff --git a/data/icons/hi48-actions-glossary.png b/data/icons/hi48-actions-glossary.png
+new file mode 100644
+index 0000000..b375f8b
+Binary files /dev/null and b/data/icons/hi48-actions-glossary.png differ
+diff --git a/data/icons/hi48-actions-isotopemap.png b/data/icons/hi48-actions-isotopemap.png
+new file mode 100644
+index 0000000..989859c
+Binary files /dev/null and b/data/icons/hi48-actions-isotopemap.png differ
+diff --git a/data/icons/hi48-actions-kalzium_molviewer.png b/data/icons/hi48-actions-kalzium_molviewer.png
+new file mode 100644
+index 0000000..1459935
+Binary files /dev/null and b/data/icons/hi48-actions-kalzium_molviewer.png differ
+diff --git a/data/icons/hi48-actions-kalzium_rs.png b/data/icons/hi48-actions-kalzium_rs.png
+new file mode 100644
+index 0000000..a2d7967
+Binary files /dev/null and b/data/icons/hi48-actions-kalzium_rs.png differ
+diff --git a/data/icons/hi48-actions-kalzium_tables.png b/data/icons/hi48-actions-kalzium_tables.png
+new file mode 100644
+index 0000000..40d4d1b
+Binary files /dev/null and b/data/icons/hi48-actions-kalzium_tables.png differ
+diff --git a/data/icons/hi48-actions-legend.png b/data/icons/hi48-actions-legend.png
+new file mode 100644
+index 0000000..e6b682d
+Binary files /dev/null and b/data/icons/hi48-actions-legend.png differ
+diff --git a/data/icons/hi48-actions-misc.png b/data/icons/hi48-actions-misc.png
+new file mode 100644
+index 0000000..f30615d
+Binary files /dev/null and b/data/icons/hi48-actions-misc.png differ
+diff --git a/data/icons/hi48-actions-numbers.png b/data/icons/hi48-actions-numbers.png
+new file mode 100644
+index 0000000..4a7ba76
+Binary files /dev/null and b/data/icons/hi48-actions-numbers.png differ
+diff --git a/data/icons/hi48-actions-orbits.png b/data/icons/hi48-actions-orbits.png
+new file mode 100644
+index 0000000..99c4e25
+Binary files /dev/null and b/data/icons/hi48-actions-orbits.png differ
+diff --git a/data/icons/hi48-actions-overview.png b/data/icons/hi48-actions-overview.png
+new file mode 100644
+index 0000000..e59aab4
+Binary files /dev/null and b/data/icons/hi48-actions-overview.png differ
+diff --git a/data/icons/hi48-actions-plot.png b/data/icons/hi48-actions-plot.png
+new file mode 100644
+index 0000000..2bd202f
+Binary files /dev/null and b/data/icons/hi48-actions-plot.png differ
+diff --git a/data/icons/hi48-actions-sidebar.png b/data/icons/hi48-actions-sidebar.png
+new file mode 100644
+index 0000000..13729ce
+Binary files /dev/null and b/data/icons/hi48-actions-sidebar.png differ
+diff --git a/data/icons/hi48-actions-spectrum.png b/data/icons/hi48-actions-spectrum.png
+new file mode 100644
+index 0000000..3d0f2a5
+Binary files /dev/null and b/data/icons/hi48-actions-spectrum.png differ
+diff --git a/data/icons/hi48-actions-statematter.png b/data/icons/hi48-actions-statematter.png
+new file mode 100644
+index 0000000..e6d3f77
+Binary files /dev/null and b/data/icons/hi48-actions-statematter.png differ
+diff --git a/data/icons/hi48-actions-timeline.png b/data/icons/hi48-actions-timeline.png
+new file mode 100644
+index 0000000..ce8a111
+Binary files /dev/null and b/data/icons/hi48-actions-timeline.png differ
+diff --git a/data/icons/hi48-actions-tooltip.png b/data/icons/hi48-actions-tooltip.png
+new file mode 100644
+index 0000000..06890e9
+Binary files /dev/null and b/data/icons/hi48-actions-tooltip.png differ
+diff --git a/data/icons/hi64-actions-kalzium_molviewer.png b/data/icons/hi64-actions-kalzium_molviewer.png
+new file mode 100644
+index 0000000..c792a32
+Binary files /dev/null and b/data/icons/hi64-actions-kalzium_molviewer.png differ
+diff --git a/data/icons/hi64-actions-kalzium_rs.png b/data/icons/hi64-actions-kalzium_rs.png
+new file mode 100644
+index 0000000..55fc832
+Binary files /dev/null and b/data/icons/hi64-actions-kalzium_rs.png differ
+diff --git a/data/icons/hi64-actions-kalzium_tables.png b/data/icons/hi64-actions-kalzium_tables.png
+new file mode 100644
+index 0000000..17cb8fa
+Binary files /dev/null and b/data/icons/hi64-actions-kalzium_tables.png differ
+diff --git a/data/icons/hi64-actions-numbers.png b/data/icons/hi64-actions-numbers.png
+new file mode 100644
+index 0000000..7fbe94b
+Binary files /dev/null and b/data/icons/hi64-actions-numbers.png differ
+diff --git a/data/icons/hisc-actions-calculate.svgz b/data/icons/hisc-actions-calculate.svgz
+new file mode 100644
+index 0000000..967e6f9
+Binary files /dev/null and b/data/icons/hisc-actions-calculate.svgz differ
+diff --git a/data/icons/hisc-actions-chemical.svgz b/data/icons/hisc-actions-chemical.svgz
+new file mode 100644
+index 0000000..8213a35
+Binary files /dev/null and b/data/icons/hisc-actions-chemical.svgz differ
+diff --git a/data/icons/hisc-actions-elempic.svgz b/data/icons/hisc-actions-elempic.svgz
+new file mode 100644
+index 0000000..67d6c2f
+Binary files /dev/null and b/data/icons/hisc-actions-elempic.svgz differ
+diff --git a/data/icons/hisc-actions-energies.svgz b/data/icons/hisc-actions-energies.svgz
+new file mode 100644
+index 0000000..765b4e8
+Binary files /dev/null and b/data/icons/hisc-actions-energies.svgz differ
+diff --git a/data/icons/hisc-actions-eqchem.svgz b/data/icons/hisc-actions-eqchem.svgz
+new file mode 100644
+index 0000000..41ab7f7
+Binary files /dev/null and b/data/icons/hisc-actions-eqchem.svgz differ
+diff --git a/data/icons/hisc-actions-glossary.svgz b/data/icons/hisc-actions-glossary.svgz
+new file mode 100644
+index 0000000..156b686
+Binary files /dev/null and b/data/icons/hisc-actions-glossary.svgz differ
+diff --git a/data/icons/hisc-actions-isotopemap.svgz b/data/icons/hisc-actions-isotopemap.svgz
+new file mode 100644
+index 0000000..1ccf023
+Binary files /dev/null and b/data/icons/hisc-actions-isotopemap.svgz differ
+diff --git a/data/icons/hisc-actions-kalzium_molviewer.svgz b/data/icons/hisc-actions-kalzium_molviewer.svgz
+new file mode 100644
+index 0000000..23dcabe
+Binary files /dev/null and b/data/icons/hisc-actions-kalzium_molviewer.svgz differ
+diff --git a/data/icons/hisc-actions-kalzium_rs.svgz b/data/icons/hisc-actions-kalzium_rs.svgz
+new file mode 100644
+index 0000000..a3236cd
+Binary files /dev/null and b/data/icons/hisc-actions-kalzium_rs.svgz differ
+diff --git a/data/icons/hisc-actions-kalzium_tables.svgz b/data/icons/hisc-actions-kalzium_tables.svgz
+new file mode 100644
+index 0000000..eef6ff0
+Binary files /dev/null and b/data/icons/hisc-actions-kalzium_tables.svgz differ
+diff --git a/data/icons/hisc-actions-misc.svgz b/data/icons/hisc-actions-misc.svgz
+new file mode 100644
+index 0000000..b3dad39
+Binary files /dev/null and b/data/icons/hisc-actions-misc.svgz differ
+diff --git a/data/icons/hisc-actions-numbers.svgz b/data/icons/hisc-actions-numbers.svgz
+new file mode 100644
+index 0000000..ceb29b9
+Binary files /dev/null and b/data/icons/hisc-actions-numbers.svgz differ
+diff --git a/data/icons/hisc-actions-orbits.svgz b/data/icons/hisc-actions-orbits.svgz
+new file mode 100644
+index 0000000..df6581d
+Binary files /dev/null and b/data/icons/hisc-actions-orbits.svgz differ
+diff --git a/data/icons/hisc-actions-overview.svgz b/data/icons/hisc-actions-overview.svgz
+new file mode 100644
+index 0000000..5f62d6b
+Binary files /dev/null and b/data/icons/hisc-actions-overview.svgz differ
+diff --git a/data/icons/hisc-actions-plot.svgz b/data/icons/hisc-actions-plot.svgz
+new file mode 100644
+index 0000000..94cab3d
+Binary files /dev/null and b/data/icons/hisc-actions-plot.svgz differ
+diff --git a/data/icons/hisc-actions-sidebar.svgz b/data/icons/hisc-actions-sidebar.svgz
+new file mode 100644
+index 0000000..b0342bd
+Binary files /dev/null and b/data/icons/hisc-actions-sidebar.svgz differ
+diff --git a/data/icons/hisc-actions-spectrum.svgz b/data/icons/hisc-actions-spectrum.svgz
+new file mode 100644
+index 0000000..b285262
+Binary files /dev/null and b/data/icons/hisc-actions-spectrum.svgz differ
+diff --git a/data/icons/hisc-actions-statematter.svgz b/data/icons/hisc-actions-statematter.svgz
+new file mode 100644
+index 0000000..f10fc69
+Binary files /dev/null and b/data/icons/hisc-actions-statematter.svgz differ
+diff --git a/data/icons/hisc-actions-timeline.svgz b/data/icons/hisc-actions-timeline.svgz
+new file mode 100644
+index 0000000..66cf86e
+Binary files /dev/null and b/data/icons/hisc-actions-timeline.svgz differ
+diff --git a/data/icons/hisc-actions-tooltip.svgz b/data/icons/hisc-actions-tooltip.svgz
+new file mode 100644
+index 0000000..6f4e4d2
+Binary files /dev/null and b/data/icons/hisc-actions-tooltip.svgz differ
+diff --git a/doc/CMakeLists.txt b/doc/CMakeLists.txt
+index f04a92b..79acf14 100644
+--- a/doc/CMakeLists.txt
++++ b/doc/CMakeLists.txt
+@@ -1,5 +1,4 @@
+ ########### install files ###############
+-#
+ 
+-kde4_create_handbook(index.docbook INSTALL_DESTINATION ${HTML_INSTALL_DIR}/en SUBDIR kalzium)
+-kde4_create_manpage(man-kalzium.1.docbook 1 INSTALL_DESTINATION ${MAN_INSTALL_DIR})
++kdoctools_create_handbook(index.docbook INSTALL_DESTINATION ${HTML_INSTALL_DIR}/en SUBDIR kalzium)
++kdoctools_create_manpage(man-kalzium.1.docbook 1 INSTALL_DESTINATION ${MAN_INSTALL_DIR})
+diff --git a/libscience/CMakeLists.txt b/libscience/CMakeLists.txt
+index ac66132..cf7ac6f 100644
+--- a/libscience/CMakeLists.txt
++++ b/libscience/CMakeLists.txt
+@@ -15,10 +15,9 @@ set(science_LIB_SRCS
+ )
+ 
+ 
+-kde4_add_library(science SHARED ${science_LIB_SRCS})
+-
+-target_link_libraries(science  ${KDE4_KDECORE_LIBS} ${QT_QTXML_LIBRARY} ${KDE4_KUNITCONVERSION_LIBRARY})
++add_library(science SHARED ${science_LIB_SRCS})
+ 
++target_link_libraries(science   Qt5::Xml KF5::UnitConversion KF5::WidgetsAddons)
+ set_target_properties(science PROPERTIES VERSION ${GENERIC_LIB_VERSION} SOVERSION ${GENERIC_LIB_SOVERSION} )
+ install(TARGETS science  ${INSTALL_TARGETS_DEFAULT_ARGS})
+ 
+diff --git a/libscience/tests/CMakeLists.txt b/libscience/tests/CMakeLists.txt
+index 21c4f85..6c2da92 100644
+--- a/libscience/tests/CMakeLists.txt
++++ b/libscience/tests/CMakeLists.txt
+@@ -5,24 +5,27 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/..)
+ 
+ set(elementparsertest_SRCS xmlreadingtest.cpp)
+ 
+-kde4_add_executable(elementparsertest NOGUI ${elementparsertest_SRCS})
++add_executable(elementparsertest ${elementparsertest_SRCS})
+ 
+-target_link_libraries(elementparsertest science ${QT_QTCORE_LIBRARY} ${QT_QTXML_LIBRARY})
++target_link_libraries(elementparsertest science Qt5::Core Qt5::Xml)
++ecm_mark_nongui_executable(elementparsertest)
+ 
+ ########### next target ###############
+ 
+ set(isotopeparsertest_SRCS isotopereadingtest.cpp)
+ 
+-kde4_add_executable(isotopeparsertest NOGUI ${isotopeparsertest_SRCS})
++add_executable(isotopeparsertest ${isotopeparsertest_SRCS})
++ecm_mark_nongui_executable(isotopeparsertest)
+ 
+-target_link_libraries(isotopeparsertest science ${QT_QTCORE_LIBRARY} ${QT_QTXML_LIBRARY})
++target_link_libraries(isotopeparsertest science Qt5::Core Qt5::Xml)
+ 
+ ########### next target ###############
+ 
+ set(spectrumtest_SRCS spectrumreadingtests.cpp)
+ 
+-kde4_add_executable(spectrumtest NOGUI ${spectrumtest_SRCS})
++add_executable(spectrumtest ${spectrumtest_SRCS})
++ecm_mark_nongui_executable(spectrumtest)
+ 
+-target_link_libraries(spectrumtest science ${QT_QTCORE_LIBRARY} ${QT_QTXML_LIBRARY})
++target_link_libraries(spectrumtest science Qt5::Core Qt5::Xml)
+ 
+ 
+diff --git a/plasmoid/applet/bodr/CMakeLists.txt b/plasmoid/applet/bodr/CMakeLists.txt
+index e3ed33e..bcbefc1 100644
+--- a/plasmoid/applet/bodr/CMakeLists.txt
++++ b/plasmoid/applet/bodr/CMakeLists.txt
+@@ -1,17 +1,15 @@
+-include_directories( 
+-   ${CMAKE_SOURCE_DIR}/libkdeedu/libscience/   
+-   )
++#include_directories(    ${CMAKE_SOURCE_DIR}/libkdeedu/libscience/   )
+ 
+ set(kalzium_plasma_SRCS
+     kalzium_plasma.cpp
+     )
+ 
+-kde4_add_ui_files(kalzium_plasma_SRCS config.ui)
++qt5_wrap_ui(kalzium_plasma_SRCS config.ui)
+ 
+-kde4_add_plugin(plasma_applet_kalzium ${kalzium_plasma_SRCS})
++add_plugin(plasma_applet_kalzium ${kalzium_plasma_SRCS})
+ 
+ target_link_libraries(plasma_applet_kalzium
+-    ${KDE4_PLASMA_LIBS} ${KDE4_KIO_LIBS}
++    KF5::Plasma KF5::KIOWidgets
+     science
+     )
+ 
+diff --git a/plasmoid/applet/concentrationPlasmoid/CMakeLists.txt b/plasmoid/applet/concentrationPlasmoid/CMakeLists.txt
+index 32ea556..b8ef22d 100644
+--- a/plasmoid/applet/concentrationPlasmoid/CMakeLists.txt
++++ b/plasmoid/applet/concentrationPlasmoid/CMakeLists.txt
+@@ -1,11 +1,11 @@
+ project(concentrationCalculator)
+ 
+ set(concentrationCalculator_SRCS concentrationCalculator.cpp)
+-kde4_add_ui_files(concentrationCalculator_SRCS concentrationCalculatorConfig.ui)
+-kde4_add_plugin(concentrationCalculator ${concentrationCalculator_SRCS})
++qt5_wrap_ui(concentrationCalculator_SRCS concentrationCalculatorConfig.ui)
++add_library(concentrationCalculator ${concentrationCalculator_SRCS})
+ target_link_libraries(concentrationCalculator
+-                      ${KDE4_PLASMA_LIBS} ${KDE4_KDEUI_LIBS}
+-                      ${KDE4_KUNITCONVERSION_LIBRARY}
++                      KF5::Plasma KF5::WidgetsAddons
++                      KF5::UnitConversion
+                       )
+ 
+ install(TARGETS concentrationCalculator DESTINATION ${PLUGIN_INSTALL_DIR})
+diff --git a/plasmoid/applet/didyouknow/CMakeLists.txt b/plasmoid/applet/didyouknow/CMakeLists.txt
+index f6ca9e3..0079fd3 100644
+--- a/plasmoid/applet/didyouknow/CMakeLists.txt
++++ b/plasmoid/applet/didyouknow/CMakeLists.txt
+@@ -1,15 +1,13 @@
+-include_directories(
+-   ${CMAKE_SOURCE_DIR}/libkdeedu/libscience/
+-   )
++#include_directories(${CMAKE_SOURCE_DIR}/libkdeedu/libscience/)
+ 
+ set(didyouknow_plasma_SRCS
+     didyouknow.cpp
+     )
+ 
+-kde4_add_plugin(plasma_applet_didyouknow ${didyouknow_plasma_SRCS})
++add_library(plasma_applet_didyouknow ${didyouknow_plasma_SRCS})
+ 
+ target_link_libraries(plasma_applet_didyouknow
+-    ${KDE4_PLASMA_LIBS} ${KDE4_KIO_LIBS}
++    KF5::Plasma KF5::KIOWidgests
+     science
+     )
+ 
+diff --git a/plasmoid/applet/gasPlasmoid/CMakeLists.txt b/plasmoid/applet/gasPlasmoid/CMakeLists.txt
+index 7d199bb..8105380 100644
+--- a/plasmoid/applet/gasPlasmoid/CMakeLists.txt
++++ b/plasmoid/applet/gasPlasmoid/CMakeLists.txt
+@@ -1,11 +1,11 @@
+ project(gasCalculator)
+ 
+ set(gasCalculator_SRCS gasCalculator.cpp)
+-kde4_add_ui_files(gasCalculator_SRCS gasCalculatorConfig.ui)
+-kde4_add_plugin(gasCalculator ${gasCalculator_SRCS})
++qt5_wrap_ui(gasCalculator_SRCS gasCalculatorConfig.ui)
++add_library(gasCalculator ${gasCalculator_SRCS})
+ target_link_libraries(gasCalculator
+-                      ${KDE4_PLASMA_LIBS} ${KDE4_KDEUI_LIBS}
+-                      ${KDE4_KUNITCONVERSION_LIBRARY}
++                      KF5::Plasma KF5::Ui KF5::WidgetsAddons
++                      KF5::UnitConversion
+                       )
+ 
+ install(TARGETS gasCalculator DESTINATION ${PLUGIN_INSTALL_DIR})
+diff --git a/plasmoid/applet/nuclearPlasmoid/CMakeLists.txt b/plasmoid/applet/nuclearPlasmoid/CMakeLists.txt
+index 4acfab6..90c77a9 100644
+--- a/plasmoid/applet/nuclearPlasmoid/CMakeLists.txt
++++ b/plasmoid/applet/nuclearPlasmoid/CMakeLists.txt
+@@ -1,18 +1,16 @@
+ project(nuclearCalculator)
+ 
+-include_directories(
+-   ${CMAKE_SOURCE_DIR}/libkdeedu/libscience/
+-   )
++#include_directories(   ${CMAKE_SOURCE_DIR}/libkdeedu/libscience/)
+ 
+ set(nuclearCalculator_SRCS
+    nuclearCalculator.cpp
+    kalziumdataobject.cpp
+    )
+-kde4_add_ui_files(nuclearCalculator_SRCS nuclearCalculatorConfig.ui)
+-kde4_add_plugin(nuclearCalculator ${nuclearCalculator_SRCS})
++qt5_wrap_ui(nuclearCalculator_SRCS nuclearCalculatorConfig.ui)
++add_library(nuclearCalculator ${nuclearCalculator_SRCS})
+ target_link_libraries(nuclearCalculator
+-                      ${KDE4_PLASMA_LIBS} ${KDE4_KDEUI_LIBS} ${KDE4_KHTML_LIBRARY}
+-                      science ${KDE4_KUNITCONVERSION_LIBRARY}
++                      KF5::Plasma KF5::Ui KF5::KHtml
++                      science KF5::UnitConversion
+                       )
+ 
+ install(TARGETS nuclearCalculator DESTINATION ${PLUGIN_INSTALL_DIR})
+diff --git a/plasmoid/applet/psePlasmoid/CMakeLists.txt b/plasmoid/applet/psePlasmoid/CMakeLists.txt
+index 58da62f..c837bfd 100644
+--- a/plasmoid/applet/psePlasmoid/CMakeLists.txt
++++ b/plasmoid/applet/psePlasmoid/CMakeLists.txt
+@@ -8,13 +8,13 @@ include_directories(
+ # We add our source code here
+ set(periodic_SRCS Molmasscalculator.cpp Periodictable.cpp)
+ 
+-kde4_add_ui_files(periodic_SRCS Molmassconfig.ui)
++qt5_wrap_ui(periodic_SRCS Molmassconfig.ui)
+ 
+ # Now make sure all files get to the right place
+-kde4_add_plugin(plasma_applet_molmassCalculator ${periodic_SRCS})
++add_library(plasma_applet_molmassCalculator ${periodic_SRCS})
+ 
+ target_link_libraries(plasma_applet_molmassCalculator
+-                      ${KDE4_PLASMA_LIBS} ${KDE4_KDEUI_LIBS} science)
++                      KF5::Plasma KF5::WidgetAddons science)
+ 
+ install(TARGETS plasma_applet_molmassCalculator
+         DESTINATION ${PLUGIN_INSTALL_DIR})
+diff --git a/plasmoid/engine/CMakeLists.txt b/plasmoid/engine/CMakeLists.txt
+index 534a56d..8b4bcb0 100644
+--- a/plasmoid/engine/CMakeLists.txt
++++ b/plasmoid/engine/CMakeLists.txt
+@@ -6,10 +6,10 @@ include_directories(
+    ${CMAKE_SOURCE_DIR}/libkdeedu/libscience/
+    )
+ 
+-kde4_add_plugin(plasma_engine_kalzium ${kalzium_engine_SRCS})
++add_library(plasma_engine_kalzium ${kalzium_engine_SRCS})
+ target_link_libraries(plasma_engine_kalzium
+-   ${KDE4_PLASMA_LIBS}
+-   ${QT_QTXML_LIBRARY}
++   KF5::Plasma
++   Qt5::Xml
+    science
+ )
+ 
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index 3cefc58..41df92e 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -18,7 +18,7 @@ if (OPENBABEL2_FOUND)
+       tools/obconverter.cpp
+       )
+ 
+-   kde4_add_ui_files(kalziumtools_SRCS
++   qt5_wrap_ui(kalziumtools_SRCS
+       tools/obconverterwidget.ui
+       )
+    include_directories(${OPENBABEL2_INCLUDE_DIR})
+@@ -32,7 +32,7 @@ if (OPENBABEL2_FOUND)
+          tools/moleculeview.cpp
+          ../compoundviewer/kalziumglwidget.cpp
+          )
+-      kde4_add_ui_files(kalziumtools_SRCS
++      qt5_wrap_ui(kalziumtools_SRCS
+          tools/moleculeviewerwidget.ui
+          )
+       include_directories(${EIGEN3_INCLUDE_DIR})
+@@ -49,7 +49,7 @@ set(kalziumtools_SRCS
+    calculator/titrationCalculator.cpp
+ #   calculator/massCalculator.cpp
+    )
+-kde4_add_ui_files(kalziumtools_SRCS
++qt5_wrap_ui(kalziumtools_SRCS
+    calculator/calculator.ui
+    calculator/nuclearCalculator.ui
+    calculator/gasCalculator.ui
+@@ -110,12 +110,12 @@ if (LIBFACILE_FOUND)
+       ${CMAKE_CURRENT_BINARY_DIR}/solver.o
+       ${CMAKE_CURRENT_BINARY_DIR}/modwrap.o
+       )
+-   kde4_add_ui_files(kalzium_SRCS
++   qt5_wrap_ui(kalzium_SRCS
+       equationview.ui
+       )
+ endif (LIBFACILE_FOUND)
+ 
+-kde4_add_ui_files(kalzium_SRCS
++qt5_wrap_ui(kalzium_SRCS
+    isotopetable/isotopedialog.ui
+    settings_colors.ui
+    plotsetupwidget.ui
+@@ -127,14 +127,14 @@ kde4_add_ui_files(kalzium_SRCS
+    exportdialog.ui
+    )
+ 
+-kde4_add_kcfg_files(kalzium_SRCS prefs.kcfgc )
++kconfig_add_kcfg_files(kalzium_SRCS prefs.kcfgc )
+ 
+-kde4_add_app_icon(kalzium_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/hi*-app-kalzium.png")
++#kde4_add_app_icon(kalzium_SRCS "${CMAKE_CURRENT_SOURCE_DIR}/hi*-app-kalzium.png")
+ 
+-kde4_add_executable(kalzium ${kalzium_SRCS})
+-
+-target_link_libraries(kalzium ${KDE4_KHTML_LIBRARY} ${KDE4_KNEWSTUFF3_LIBS} ${KDE4_KUNITCONVERSION_LIBS} ${QT_QTSCRIPT_LIBRARY} ${QT_QTDECLARATIVE_LIBRARY} science)
++add_executable(kalzium ${kalzium_SRCS})
+ 
++target_link_libraries(kalzium KDE5::KHTML KDE5::NewStuff KDE4_KUNITCONVERSION_LIBS Qt5::Script  Qt5::Declarative science)
++#QT_QTSCRIPT_LIBRARY
+ if (OPENBABEL2_FOUND)
+    target_link_libraries(kalzium ${OPENBABEL2_LIBRARIES})
+    if (EIGEN3_FOUND AND Avogadro_FOUND)
+@@ -174,4 +174,4 @@ install(FILES kalzium.kcfg DESTINATION ${KCFG_INSTALL_DIR})
+ install(FILES kalziumui.rc DESTINATION ${DATA_INSTALL_DIR}/kalzium)
+ install(FILES kalzium.knsrc DESTINATION ${CONFIG_INSTALL_DIR})
+ 
+-kde4_install_icons(${ICON_INSTALL_DIR})
++#kde4_install_icons(${ICON_INSTALL_DIR})
+diff --git a/src/kalzium.desktop b/src/kalzium.desktop
+old mode 100755
+new mode 100644

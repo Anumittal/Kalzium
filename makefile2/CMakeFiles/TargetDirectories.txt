@@ -1,0 +1,14 @@
+/home/anu/kalzium/makefile2/compoundviewer/CMakeFiles/compoundviewer.dir
+/home/anu/kalzium/makefile2/plasmoid/applet/concentrationPlasmoid/CMakeFiles/concentrationCalculator.dir
+/home/anu/kalzium/makefile2/doc/CMakeFiles/doc-index-cache-bz2.dir
+/home/anu/kalzium/makefile2/doc/CMakeFiles/doc-kalzium-1.dir
+/home/anu/kalzium/makefile2/libscience/tests/CMakeFiles/elementparsertest.dir
+/home/anu/kalzium/makefile2/plasmoid/applet/gasPlasmoid/CMakeFiles/gasCalculator.dir
+/home/anu/kalzium/makefile2/libscience/tests/CMakeFiles/isotopeparsertest.dir
+/home/anu/kalzium/makefile2/src/CMakeFiles/kalzium.dir
+/home/anu/kalzium/makefile2/plasmoid/applet/nuclearPlasmoid/CMakeFiles/nuclearCalculator.dir
+/home/anu/kalzium/makefile2/plasmoid/applet/didyouknow/CMakeFiles/plasma_applet_didyouknow.dir
+/home/anu/kalzium/makefile2/plasmoid/applet/psePlasmoid/CMakeFiles/plasma_applet_molmassCalculator.dir
+/home/anu/kalzium/makefile2/plasmoid/engine/CMakeFiles/plasma_engine_kalzium.dir
+/home/anu/kalzium/makefile2/libscience/CMakeFiles/science.dir
+/home/anu/kalzium/makefile2/libscience/tests/CMakeFiles/spectrumtest.dir

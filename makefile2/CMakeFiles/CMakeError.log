@@ -1,0 +1,169 @@
+Performing C++ SOURCE FILE Test _OFFT_IS_64BIT failed with the following output:
+Change Dir: /home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec672335492/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec672335492.dir/build.make CMakeFiles/cmTryCompileExec672335492.dir/build
+make[1]: Entering directory '/home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec672335492.dir/src.cxx.o
+/usr/bin/c++   -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -D_OFFT_IS_64BIT   -o CMakeFiles/cmTryCompileExec672335492.dir/src.cxx.o -c /home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp/src.cxx
+/home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp/src.cxx:7:36: warning: left shift count >= width of type
+ #define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
+                                    ^
+/home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp/src.cxx:8:23: note: in expansion of macro ‘LARGE_OFF_T’
+   int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721 && LARGE_OFF_T % 2147483647 == 1) ? 1 : -1];
+                       ^
+/home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp/src.cxx:7:60: warning: left shift count >= width of type
+ #define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
+                                                            ^
+/home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp/src.cxx:8:23: note: in expansion of macro ‘LARGE_OFF_T’
+   int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721 && LARGE_OFF_T % 2147483647 == 1) ? 1 : -1];
+                       ^
+/home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp/src.cxx:8:97: error: size of array ‘off_t_is_large’ is negative
+   int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721 && LARGE_OFF_T % 2147483647 == 1) ? 1 : -1];
+                                                                                                 ^
+CMakeFiles/cmTryCompileExec672335492.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec672335492.dir/src.cxx.o' failed
+make[1]: Leaving directory '/home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec672335492.dir/src.cxx.o] Error 1
+Makefile:118: recipe for target 'cmTryCompileExec672335492/fast' failed
+make: *** [cmTryCompileExec672335492/fast] Error 2
+
+Source file was:
+
+#include <sys/types.h>
+ /* Check that off_t can represent 2**63 - 1 correctly.
+    We can't simply define LARGE_OFF_T to be 9223372036854775807,
+    since some C++ compilers masquerading as C compilers
+    incorrectly reject 9223372036854775807.  */
+#define LARGE_OFF_T (((off_t) 1 << 62) - 1 + ((off_t) 1 << 62))
+  int off_t_is_large[(LARGE_OFF_T % 2147483629 == 721 && LARGE_OFF_T % 2147483647 == 1) ? 1 : -1];
+  int main() { return 0; }
+
+Determining if files ieeefp.h exist failed with the following output:
+Change Dir: /home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2673939435/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2673939435.dir/build.make CMakeFiles/cmTryCompileExec2673939435.dir/build
+make[1]: Entering directory '/home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2673939435.dir/CheckIncludeFiles.c.o
+/usr/bin/cc  -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -std=iso9899:1990 -fno-common -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wmissing-format-attribute -Wwrite-strings -Werror=implicit-function-declaration    -o CMakeFiles/cmTryCompileExec2673939435.dir/CheckIncludeFiles.c.o   -c /home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:2:20: fatal error: ieeefp.h: No such file or directory
+ #include <ieeefp.h>
+                    ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec2673939435.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2673939435.dir/CheckIncludeFiles.c.o' failed
+make[1]: Leaving directory '/home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec2673939435.dir/CheckIncludeFiles.c.o] Error 1
+Makefile:118: recipe for target 'cmTryCompileExec2673939435/fast' failed
+make: *** [cmTryCompileExec2673939435/fast] Error 2
+
+Source:
+/* */
+#include <ieeefp.h>
+
+
+int main(){return 0;}
+
+Determining if the Q_WS_WIN exist failed with the following output:
+Change Dir: /home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3181832907/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3181832907.dir/build.make CMakeFiles/cmTryCompileExec3181832907.dir/build
+make[1]: Entering directory '/home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3181832907.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -std=c++0x -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type  -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec3181832907.dir/CheckSymbolExists.cxx.o -c /home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_WIN’ was not declared in this scope
+   return ((int*)(&Q_WS_WIN))[argc];
+                   ^
+CMakeFiles/cmTryCompileExec3181832907.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3181832907.dir/CheckSymbolExists.cxx.o' failed
+make[1]: Leaving directory '/home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3181832907.dir/CheckSymbolExists.cxx.o] Error 1
+Makefile:118: recipe for target 'cmTryCompileExec3181832907/fast' failed
+make: *** [cmTryCompileExec3181832907/fast] Error 2
+
+File /home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_WIN
+  return ((int*)(&Q_WS_WIN))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_QWS exist failed with the following output:
+Change Dir: /home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3464394932/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3464394932.dir/build.make CMakeFiles/cmTryCompileExec3464394932.dir/build
+make[1]: Entering directory '/home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec3464394932.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -std=c++0x -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type  -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec3464394932.dir/CheckSymbolExists.cxx.o -c /home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_QWS’ was not declared in this scope
+   return ((int*)(&Q_WS_QWS))[argc];
+                   ^
+CMakeFiles/cmTryCompileExec3464394932.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3464394932.dir/CheckSymbolExists.cxx.o' failed
+make[1]: Leaving directory '/home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3464394932.dir/CheckSymbolExists.cxx.o] Error 1
+Makefile:118: recipe for target 'cmTryCompileExec3464394932/fast' failed
+make: *** [cmTryCompileExec3464394932/fast] Error 2
+
+File /home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_QWS
+  return ((int*)(&Q_WS_QWS))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the Q_WS_MAC exist failed with the following output:
+Change Dir: /home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec233326013/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec233326013.dir/build.make CMakeFiles/cmTryCompileExec233326013.dir/build
+make[1]: Entering directory '/home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building CXX object CMakeFiles/cmTryCompileExec233326013.dir/CheckSymbolExists.cxx.o
+/usr/bin/c++   -D_FILE_OFFSET_BITS=64 -D_GNU_SOURCE -D_LARGEFILE64_SOURCE -std=c++0x -fno-exceptions -Wall -Wextra -Wcast-align -Wchar-subscripts -Wformat-security -Wno-long-long -Wpointer-arith -Wundef -Wnon-virtual-dtor -Woverloaded-virtual -Werror=return-type  -I/usr/include/qt4    -o CMakeFiles/cmTryCompileExec233326013.dir/CheckSymbolExists.cxx.o -c /home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+/home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+/home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:8:19: error: ‘Q_WS_MAC’ was not declared in this scope
+   return ((int*)(&Q_WS_MAC))[argc];
+                   ^
+CMakeFiles/cmTryCompileExec233326013.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec233326013.dir/CheckSymbolExists.cxx.o' failed
+make[1]: Leaving directory '/home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec233326013.dir/CheckSymbolExists.cxx.o] Error 1
+Makefile:118: recipe for target 'cmTryCompileExec233326013/fast' failed
+make: *** [cmTryCompileExec233326013/fast] Error 2
+
+File /home/anu/kalzium/makefile2/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <QtCore/qglobal.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef Q_WS_MAC
+  return ((int*)(&Q_WS_MAC))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
