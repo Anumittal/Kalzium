@@ -4,6 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
+  "/home/anu/kalzium/compoundviewer/kalziumglpart.cpp" "/home/anu/kalzium/makefile2/compoundviewer/CMakeFiles/compoundviewer.dir/kalziumglpart.cpp.o"
   "/home/anu/kalzium/compoundviewer/kalziumglwidget.cpp" "/home/anu/kalzium/makefile2/compoundviewer/CMakeFiles/compoundviewer.dir/kalziumglwidget.cpp.o"
   "/home/anu/kalzium/compoundviewer/openbabel2wrapper.cpp" "/home/anu/kalzium/makefile2/compoundviewer/CMakeFiles/compoundviewer.dir/openbabel2wrapper.cpp.o"
   )
@@ -37,11 +38,15 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
+  "/usr/include/openbabel-2.0"
   "/usr/include/qt4"
   "/usr/include/qt4/QtOpenGL"
   "/usr/include/qt4/QtGui"
   "/usr/include/qt4/QtCore"
   "/usr/include/eigen2"
+  "compoundviewer/.."
+  "/usr/include/eigen3"
+  "../compoundviewer"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

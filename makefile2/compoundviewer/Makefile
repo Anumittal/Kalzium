@@ -153,6 +153,30 @@ compoundviewer/fast:
 	cd /home/anu/kalzium/makefile2 && $(MAKE) -f compoundviewer/CMakeFiles/compoundviewer.dir/build.make compoundviewer/CMakeFiles/compoundviewer.dir/build
 .PHONY : compoundviewer/fast
 
+kalziumglpart.o: kalziumglpart.cpp.o
+.PHONY : kalziumglpart.o
+
+# target to build an object file
+kalziumglpart.cpp.o:
+	cd /home/anu/kalzium/makefile2 && $(MAKE) -f compoundviewer/CMakeFiles/compoundviewer.dir/build.make compoundviewer/CMakeFiles/compoundviewer.dir/kalziumglpart.cpp.o
+.PHONY : kalziumglpart.cpp.o
+
+kalziumglpart.i: kalziumglpart.cpp.i
+.PHONY : kalziumglpart.i
+
+# target to preprocess a source file
+kalziumglpart.cpp.i:
+	cd /home/anu/kalzium/makefile2 && $(MAKE) -f compoundviewer/CMakeFiles/compoundviewer.dir/build.make compoundviewer/CMakeFiles/compoundviewer.dir/kalziumglpart.cpp.i
+.PHONY : kalziumglpart.cpp.i
+
+kalziumglpart.s: kalziumglpart.cpp.s
+.PHONY : kalziumglpart.s
+
+# target to generate assembly for a file
+kalziumglpart.cpp.s:
+	cd /home/anu/kalzium/makefile2 && $(MAKE) -f compoundviewer/CMakeFiles/compoundviewer.dir/build.make compoundviewer/CMakeFiles/compoundviewer.dir/kalziumglpart.cpp.s
+.PHONY : kalziumglpart.cpp.s
+
 kalziumglwidget.o: kalziumglwidget.cpp.o
 .PHONY : kalziumglwidget.o
 
@@ -214,6 +238,9 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... kalziumglpart.o"
+	@echo "... kalziumglpart.i"
+	@echo "... kalziumglpart.s"
 	@echo "... kalziumglwidget.o"
 	@echo "... kalziumglwidget.i"
 	@echo "... kalziumglwidget.s"

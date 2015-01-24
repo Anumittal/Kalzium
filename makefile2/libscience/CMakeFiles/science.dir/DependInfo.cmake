@@ -41,6 +41,7 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
+  "/usr/include/openbabel-2.0"
   "/usr/include/i386-linux-gnu/qt5"
   "/usr/include/i386-linux-gnu/qt5/QtXml"
   "/usr/include/i386-linux-gnu/qt5/QtCore"

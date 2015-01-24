@@ -25,7 +25,7 @@
 /**
  * @author Carsten Niehaus
  */
-class COMPOUNDVIEWER_EXPORT OpenBabel2Wrapper
+class COMPOUNDVIEWER_EXPORT :public OpenBabel2Wrapper
 {
 public:
     /**
