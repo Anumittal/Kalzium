@@ -34,11 +34,11 @@ public:
      */
     static Avogadro::Molecule *readMolecule(const QString& filename);
 
-    static bool writeMolecule(const QString& filename, Avogadro::Molecule *);
+    bool writeMolecule(const QString& filename, Avogadro::Molecule *);
 
-    static QString getFormula(Avogadro::Molecule *molecule);
+    QString getFormula(Avogadro::Molecule *molecule);
 
-    static QString getPrettyFormula(Avogadro::Molecule *molecule);
+    QString getPrettyFormula(Avogadro::Molecule *molecule);
 };
 
 #endif // OPENBABEL2WRAPPER_H

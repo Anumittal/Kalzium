@@ -1,13 +1,13 @@
 include(${Avogadro_USE_FILE})
 
-#include_directories( ${CMAKE_CURRENT_BINARY_DIR}/..
- # ${EIGEN3_INCLUDE_DIR}
-  #${OPENBABEL2_INCLUDE_DIR})
+include_directories( ${CMAKE_CURRENT_BINARY_DIR}/..
+  ${EIGEN3_INCLUDE_DIR}
+  ${OPENBABEL2_INCLUDE_DIR} ${PROJECT_SOURCE_DIR}/compoundviewer)
 
 set( compoundviewer_SRCS
   openbabel2wrapper.cpp
   kalziumglwidget.cpp
-  )
+kalziumglpart.cpp )
 
 #add_subdirectory(widgets)
 
