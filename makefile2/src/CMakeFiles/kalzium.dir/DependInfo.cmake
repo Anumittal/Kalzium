@@ -86,6 +86,7 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
+  "/usr/include/openbabel-2.0"
   "../libscience"
   "../src/../compoundviewer"
   "../src/tools"
@@ -93,7 +94,6 @@ SET(CMAKE_C_TARGET_INCLUDE_PATH
   "../src/psetable"
   "../src/isotopetable"
   "src/.."
-  "/usr/include/openbabel-2.0"
   "/usr/include/qt4"
   "/usr/include/qt4/QtOpenGL"
   "/usr/include/qt4/QtGui"

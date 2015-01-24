@@ -95,16 +95,41 @@ compoundviewer/CMakeFiles/compoundviewer.dir/kalziumglwidget.cpp.o.provides: com
 
 compoundviewer/CMakeFiles/compoundviewer.dir/kalziumglwidget.cpp.o.provides.build: compoundviewer/CMakeFiles/compoundviewer.dir/kalziumglwidget.cpp.o
 
+compoundviewer/CMakeFiles/compoundviewer.dir/kalziumglpart.cpp.o: compoundviewer/CMakeFiles/compoundviewer.dir/flags.make
+compoundviewer/CMakeFiles/compoundviewer.dir/kalziumglpart.cpp.o: ../compoundviewer/kalziumglpart.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/anu/kalzium/makefile2/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object compoundviewer/CMakeFiles/compoundviewer.dir/kalziumglpart.cpp.o"
+	cd /home/anu/kalzium/makefile2/compoundviewer && /usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/compoundviewer.dir/kalziumglpart.cpp.o -c /home/anu/kalzium/compoundviewer/kalziumglpart.cpp
+
+compoundviewer/CMakeFiles/compoundviewer.dir/kalziumglpart.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/compoundviewer.dir/kalziumglpart.cpp.i"
+	cd /home/anu/kalzium/makefile2/compoundviewer && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/anu/kalzium/compoundviewer/kalziumglpart.cpp > CMakeFiles/compoundviewer.dir/kalziumglpart.cpp.i
+
+compoundviewer/CMakeFiles/compoundviewer.dir/kalziumglpart.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/compoundviewer.dir/kalziumglpart.cpp.s"
+	cd /home/anu/kalzium/makefile2/compoundviewer && /usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/anu/kalzium/compoundviewer/kalziumglpart.cpp -o CMakeFiles/compoundviewer.dir/kalziumglpart.cpp.s
+
+compoundviewer/CMakeFiles/compoundviewer.dir/kalziumglpart.cpp.o.requires:
+.PHONY : compoundviewer/CMakeFiles/compoundviewer.dir/kalziumglpart.cpp.o.requires
+
+compoundviewer/CMakeFiles/compoundviewer.dir/kalziumglpart.cpp.o.provides: compoundviewer/CMakeFiles/compoundviewer.dir/kalziumglpart.cpp.o.requires
+	$(MAKE) -f compoundviewer/CMakeFiles/compoundviewer.dir/build.make compoundviewer/CMakeFiles/compoundviewer.dir/kalziumglpart.cpp.o.provides.build
+.PHONY : compoundviewer/CMakeFiles/compoundviewer.dir/kalziumglpart.cpp.o.provides
+
+compoundviewer/CMakeFiles/compoundviewer.dir/kalziumglpart.cpp.o.provides.build: compoundviewer/CMakeFiles/compoundviewer.dir/kalziumglpart.cpp.o
+
 # Object files for target compoundviewer
 compoundviewer_OBJECTS = \
 "CMakeFiles/compoundviewer.dir/openbabel2wrapper.cpp.o" \
-"CMakeFiles/compoundviewer.dir/kalziumglwidget.cpp.o"
+"CMakeFiles/compoundviewer.dir/kalziumglwidget.cpp.o" \
+"CMakeFiles/compoundviewer.dir/kalziumglpart.cpp.o"
 
 # External object files for target compoundviewer
 compoundviewer_EXTERNAL_OBJECTS =
 
 compoundviewer/libcompoundviewer.so.SOVERSION: compoundviewer/CMakeFiles/compoundviewer.dir/openbabel2wrapper.cpp.o
 compoundviewer/libcompoundviewer.so.SOVERSION: compoundviewer/CMakeFiles/compoundviewer.dir/kalziumglwidget.cpp.o
+compoundviewer/libcompoundviewer.so.SOVERSION: compoundviewer/CMakeFiles/compoundviewer.dir/kalziumglpart.cpp.o
 compoundviewer/libcompoundviewer.so.SOVERSION: compoundviewer/CMakeFiles/compoundviewer.dir/build.make
 compoundviewer/libcompoundviewer.so.SOVERSION: /usr/lib/libopenbabel.so
 compoundviewer/libcompoundviewer.so.SOVERSION: compoundviewer/CMakeFiles/compoundviewer.dir/link.txt
@@ -120,6 +145,7 @@ compoundviewer/CMakeFiles/compoundviewer.dir/build: compoundviewer/libcompoundvi
 
 compoundviewer/CMakeFiles/compoundviewer.dir/requires: compoundviewer/CMakeFiles/compoundviewer.dir/openbabel2wrapper.cpp.o.requires
 compoundviewer/CMakeFiles/compoundviewer.dir/requires: compoundviewer/CMakeFiles/compoundviewer.dir/kalziumglwidget.cpp.o.requires
+compoundviewer/CMakeFiles/compoundviewer.dir/requires: compoundviewer/CMakeFiles/compoundviewer.dir/kalziumglpart.cpp.o.requires
 .PHONY : compoundviewer/CMakeFiles/compoundviewer.dir/requires
 
 compoundviewer/CMakeFiles/compoundviewer.dir/clean:

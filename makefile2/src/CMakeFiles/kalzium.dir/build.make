@@ -1460,6 +1460,7 @@ src/kalzium: src/modwrap.o
 src/kalzium: src/CMakeFiles/kalzium.dir/build.make
 src/kalzium: libscience/libscience.so.SOVERSION
 src/kalzium: /usr/lib/libopenbabel.so
+src/kalzium: /usr/lib/libopenbabel.so
 src/kalzium: /usr/lib/i386-linux-gnu/libQtOpenGL.so
 src/kalzium: compoundviewer/libcompoundviewer.so.SOVERSION
 src/kalzium: /usr/lib/i386-linux-gnu/libQt5Xml.so.5.3.0
