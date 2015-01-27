@@ -13,10 +13,12 @@
  ***************************************************************************/
 
 #include "openbabel2wrapper.h"
-
+#include <QApplication>
 #include <QDebug>
 #include <QLocale>
 #include <QMessageBox>
+#include <KLocalizedString>
+
 
 #include <sstream>
 #include <stdio.h>
@@ -68,7 +70,7 @@ bool OpenBabel2Wrapper::writeMolecule(const QString& filename, Avogadro::Molecul
 
     std::ofstream outFileStream(QFile::encodeName(filename));
     if (!outFileStream) {
-        QMessageBox::warning(0,i18n("Cannot save to the specified file."));
+        QMessageBox::warning(0,i18n("Sorry"),i18n("Cannot save to the specified file."));
         return false;
     }
     outFormat = Conv.FormatFromExt(QFile::encodeName(filename));

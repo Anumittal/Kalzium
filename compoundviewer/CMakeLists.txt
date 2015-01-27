@@ -6,8 +6,7 @@ include_directories( ${CMAKE_CURRENT_BINARY_DIR}/..
 
 set( compoundviewer_SRCS
   openbabel2wrapper.cpp
-  kalziumglwidget.cpp
-kalziumglpart.cpp )
+  kalziumglwidget.cpp)
 
 #add_subdirectory(widgets)
 
@@ -15,9 +14,10 @@ add_library(compoundviewer SHARED ${compoundviewer_SRCS})
 
 target_link_libraries(compoundviewer
    ${OPENBABEL2_LIBRARIES}
-   Qt5::OpenGL
+   KF5::I18n
    KF5::WidgetsAddons
-   avogadro
+   KF5::CoreAddons
+   Qt5::Core
 )
 
 set_target_properties(compoundviewer PROPERTIES VERSION ${GENERIC_LIB_VERSION} SOVERSION ${GENERIC_LIB_SOVERSION})

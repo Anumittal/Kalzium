@@ -20,7 +20,7 @@
 #include <avogadro/pluginmanager.h>
 #include <avogadro/toolgroup.h>
 #include <avogadro/engine.h>
-
+#include "kalziumglwidget.moc"
 #include "openbabel2wrapper.h"
 
 #include <config-kalzium.h>
@@ -167,4 +167,4 @@ void KalziumGLWidget::setQuality(int quality)
     GLWidget::update();
 }
 
-#include "kalziumglwidget.moc"
+

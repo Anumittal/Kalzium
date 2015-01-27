@@ -16,6 +16,11 @@ find_package(KF5Solid REQUIRED)
 find_package(ECM REQUIRED)
 find_package(Qt5Core REQUIRED)
 find_package(Qt5Gui REQUIRED)
+find_package(PkgConfig REQUIRED)
+find_package(Qt4 REQUIRED)
+find_package(KF5Archive REQUIRED)
+find_package(KF5I18n NO_MODULE)
+find_package(KF5Parts NO_MODULE)
 
 include(KDEInstallDirs)
 include(KDECompilerSettings)
@@ -23,7 +28,6 @@ include(FeatureSummary)
 include(ECMInstallIcons)
 include(ECMMarkNonGuiExecutable)
 include_directories(${OPENBABEL2_INCLUDE_DIR})
-
 
 set(CMAKE_MODULE_PATH ${kalzium_SOURCE_DIR}/cmake/modules )
 
