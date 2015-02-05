@@ -18,6 +18,7 @@
 //includes for OpenBabel2
 #include <openbabel/obconversion.h>
 #include <openbabel/mol.h>
+#include <qglobal.h>
 #include <avogadro/molecule.h>
 
 #include <libkdeedu_compoundviewer_export.h>
@@ -25,7 +26,7 @@
 /**
  * @author Carsten Niehaus
  */
-class COMPOUNDVIEWER_EXPORT :public OpenBabel2Wrapper
+class COMPOUNDVIEWER_EXPORT OpenBabel2Wrapper
 {
 public:
     /**

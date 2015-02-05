@@ -30,7 +30,7 @@
 #  define COMPOUNDVIEWER_EXPORT KDE_EXPORT
 # else
 /* We are using this library */
-#  define COMPOUNDVIEWER_EXPORT KDE_IMPORT
+#  define COMPOUNDVIEWER_EXPORT Q_DECL_IMPORT
 # endif
 #endif
 

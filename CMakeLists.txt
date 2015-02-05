@@ -3,7 +3,6 @@ cmake_minimum_required(VERSION 2.8.12)
 
 find_package(ECM 0.0.11 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR} ${OPENBABEL2_INCLUDE_DIR} ${PROJECT_SOURCE_DIR}/cmake/modules)
-
 find_package(OpenBabel2 REQUIRED)
 find_package(Qt5 REQUIRED COMPONENTS Widgets)
 find_package(KF5 REQUIRED COMPONENTS CoreAddons Solid Config)
@@ -16,14 +15,23 @@ find_package(KF5Solid REQUIRED)
 find_package(ECM REQUIRED)
 find_package(Qt5Core REQUIRED)
 find_package(Qt5Gui REQUIRED)
+find_package(PkgConfig REQUIRED)
+find_package(Qt4 REQUIRED)
+find_package(KF5Archive REQUIRED)
+find_package(KF5I18n NO_MODULE)
+find_package(KF5Parts NO_MODULE)
+find_package(Gettext REQUIRED)
+find_package(PythonInterp REQUIRED)
+find_package(Avogadro REQUIRED)
+find_package(Eigen3 REQUIRED)
+find_package(OpenGL REQUIRED)
 
 include(KDEInstallDirs)
 include(KDECompilerSettings)
 include(FeatureSummary)
 include(ECMInstallIcons)
 include(ECMMarkNonGuiExecutable)
-include_directories(${OPENBABEL2_INCLUDE_DIR})
-
+include_directories(${OPENBABEL2_INCLUDE_DIR} ${AVOGADRO_INCLUDE_DIR} ${OPENGL_INCLUDE_DIRS})
 
 set(CMAKE_MODULE_PATH ${kalzium_SOURCE_DIR}/cmake/modules )
 
